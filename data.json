@@ -1,0 +1,741 @@
+{
+  "version": 5,
+  "unit": "lb",
+  "wave": 1,
+  "next_day": 6,
+  "block": 1,
+  "program": [
+    {
+      "day": 1,
+      "name": "Marathon Builder",
+      "short": "Marathon",
+      "is_rest": false,
+      "tag": "Run",
+      "exercises": [
+        {
+          "name": "Marathon Builder",
+          "kind": "run",
+          "scheme": "1 long run \u2014 push maximum distance each cycle. Track distance and pace.",
+          "block": "cardio",
+          "focus": false,
+          "highlight": true,
+          "focus_metric": "distance"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "name": "Upper B",
+      "short": "Upper B",
+      "is_rest": false,
+      "tag": "Push / pull",
+      "exercises": [
+        {
+          "name": "Weighted Chin-Ups",
+          "kind": "power_wave",
+          "scheme": "1 warm-up, 4\u00d7 Power Waves (weighted), 1 close-set max reps",
+          "block": "strength",
+          "focus": false,
+          "highlight": true,
+          "has_max": true,
+          "one_rm_key": "Weighted Chin-Ups",
+          "max_pb_key": "Chin-Ups (Max reps)"
+        },
+        {
+          "name": "Overhead Press",
+          "kind": "power_wave",
+          "scheme": "1 warm-up, 4\u00d7 Power Waves",
+          "block": "strength",
+          "focus": false,
+          "highlight": true,
+          "one_rm_key": "Overhead Press"
+        },
+        {
+          "name": "Chest-Supported DB Row",
+          "kind": "strength",
+          "scheme": "1 warm-up + 3\u00d78\u201310",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "DB Bench",
+          "kind": "strength",
+          "scheme": "1 warm-up, 3\u00d78\u201310",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Row Machine",
+          "kind": "strength",
+          "scheme": "2\u00d78\u201310",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Lat Pull-down",
+          "kind": "strength",
+          "scheme": "2\u00d78\u201310",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Accessory Curls",
+          "kind": "strength",
+          "scheme": "2\u00d78\u201310",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Band Pull-aparts",
+          "kind": "reps",
+          "scheme": "2\u00d712\u201315",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Recovery Bike",
+          "kind": "bike",
+          "scheme": "Easy\u2013moderate recovery ride",
+          "block": "cardio",
+          "focus": false,
+          "highlight": false
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "name": "Core A",
+      "short": "Core A",
+      "is_rest": false,
+      "tag": "Core + bike",
+      "exercises": [
+        {
+          "name": "Sit-ups",
+          "kind": "reps",
+          "scheme": "4\u00d730+",
+          "block": "core",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Pallof Holds",
+          "kind": "timed",
+          "scheme": "3\u00d730 seconds+",
+          "block": "core",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Plank",
+          "kind": "timed",
+          "scheme": "1\u00d7 max time",
+          "block": "core",
+          "focus": false,
+          "highlight": true
+        },
+        {
+          "name": "Russian Twists",
+          "kind": "max_reps",
+          "scheme": "1\u00d7 max reps",
+          "block": "core",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Alternating Toe Taps",
+          "kind": "reps",
+          "scheme": "2\u00d716",
+          "block": "core",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Long Bike Ride",
+          "kind": "bike",
+          "scheme": "Long ride after core",
+          "block": "cardio",
+          "focus": false,
+          "highlight": false
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "name": "Lower B",
+      "short": "Lower B",
+      "is_rest": false,
+      "tag": "Squat",
+      "exercises": [
+        {
+          "name": "Box Jumps",
+          "kind": "reps",
+          "scheme": "3\u00d76\u20138",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Squat Power Waves",
+          "kind": "power_wave",
+          "scheme": "2\u00d7 warm-up, 4\u00d7 Power Waves, 1\u00d7 cool-down",
+          "block": "strength",
+          "focus": false,
+          "highlight": true,
+          "one_rm_key": "Squat"
+        },
+        {
+          "name": "Speed Trap Bar",
+          "kind": "strength",
+          "scheme": "6\u00d72\u20135",
+          "block": "strength",
+          "focus": false,
+          "highlight": false,
+          "speed": true,
+          "one_rm_key": "Trap-Bar Deadlift"
+        },
+        {
+          "name": "Light Lunge",
+          "kind": "strength",
+          "scheme": "2\u00d78\u201310",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Calf Raises",
+          "kind": "strength",
+          "scheme": "3\u00d715",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Leg Extensions",
+          "kind": "strength",
+          "scheme": "2\u00d712\u201315",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Short Run",
+          "kind": "run",
+          "scheme": "Short run finisher",
+          "block": "cardio",
+          "focus": false,
+          "highlight": false,
+          "focus_metric": "pace"
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "name": "Upper A",
+      "short": "Upper A",
+      "is_rest": false,
+      "tag": "Bench / pull",
+      "exercises": [
+        {
+          "name": "Bench Power Waves",
+          "kind": "power_wave",
+          "scheme": "2\u00d7 warm-up, 4\u00d7 Power Waves, 1\u00d7 cool-down",
+          "block": "strength",
+          "focus": false,
+          "highlight": true,
+          "one_rm_key": "Bench"
+        },
+        {
+          "name": "Weighted Pull-Ups",
+          "kind": "power_wave",
+          "scheme": "1\u00d7 warm-up, 4\u00d7 Power Waves, 1\u00d7 max reps",
+          "block": "strength",
+          "focus": false,
+          "highlight": true,
+          "has_max": true,
+          "one_rm_key": "Weighted Pull-Ups",
+          "max_pb_key": "Pull-Ups (reps)"
+        },
+        {
+          "name": "Incline DB Press",
+          "kind": "strength",
+          "scheme": "3\u00d78\u201310",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Bird Dog Rows",
+          "kind": "strength",
+          "scheme": "3\u00d78\u201310",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Dips",
+          "kind": "max_reps",
+          "scheme": "2\u00d7 max",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "DB Shoulder Press",
+          "kind": "strength",
+          "scheme": "2\u00d78\u201310",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Band Pull-aparts",
+          "kind": "reps",
+          "scheme": "2\u00d712\u201315",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Overhead Tricep Extension",
+          "kind": "strength",
+          "scheme": "2\u00d710",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Moderate Run",
+          "kind": "run",
+          "scheme": "Moderate run finisher",
+          "block": "cardio",
+          "focus": false,
+          "highlight": false,
+          "focus_metric": "pace"
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "name": "Tempo Run",
+      "short": "Tempo",
+      "is_rest": false,
+      "tag": "Run",
+      "exercises": [
+        {
+          "name": "Tempo Run",
+          "kind": "run",
+          "scheme": "Track distance and pace. Beat last Marathon Builder pace.",
+          "block": "cardio",
+          "focus": false,
+          "highlight": false,
+          "focus_metric": "pace"
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "name": "Lower A",
+      "short": "Lower A",
+      "is_rest": false,
+      "tag": "Deadlift",
+      "exercises": [
+        {
+          "name": "Speed Cleans",
+          "kind": "strength",
+          "scheme": "5\u00d72\u20133",
+          "block": "strength",
+          "focus": false,
+          "highlight": false,
+          "speed": true
+        },
+        {
+          "name": "Trap-Bar Deadlift Power Waves",
+          "kind": "power_wave",
+          "scheme": "3\u00d7 warm-up, 4\u00d7 Power Waves, 1\u00d7 cool-down",
+          "block": "strength",
+          "focus": false,
+          "highlight": true,
+          "one_rm_key": "Trap-Bar Deadlift"
+        },
+        {
+          "name": "Speed Squats",
+          "kind": "strength",
+          "scheme": "6\u00d72\u20135",
+          "block": "strength",
+          "focus": false,
+          "highlight": false,
+          "speed": true,
+          "one_rm_key": "Squat"
+        },
+        {
+          "name": "Bulgarian Lunges",
+          "kind": "strength",
+          "scheme": "2\u00d78\u201310",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Side Lunge Squats (barbell)",
+          "kind": "strength",
+          "scheme": "1\u00d710 each side",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Hamstring Curls",
+          "kind": "strength",
+          "scheme": "2\u00d712\u201315",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Wall Squat",
+          "kind": "timed",
+          "scheme": "1\u00d7 max",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Moderate Bike",
+          "kind": "bike",
+          "scheme": "Moderate bike finisher",
+          "block": "cardio",
+          "focus": false,
+          "highlight": false
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "name": "Arms",
+      "short": "Arms",
+      "is_rest": false,
+      "tag": "Arms + mile",
+      "exercises": [
+        {
+          "name": "Push-ups",
+          "kind": "max_reps",
+          "scheme": "1\u00d7 max reps",
+          "block": "strength",
+          "focus": false,
+          "highlight": true,
+          "pb_key": "Push-Ups (reps)"
+        },
+        {
+          "name": "Curls",
+          "kind": "power_wave",
+          "scheme": "1\u00d7 warm-up, 3\u00d7 Power Waves",
+          "block": "strength",
+          "focus": false,
+          "highlight": true,
+          "one_rm_key": "Curls"
+        },
+        {
+          "name": "Skull-crushers",
+          "kind": "power_wave",
+          "scheme": "1\u00d7 warm-up, 3\u00d7 Power Waves",
+          "block": "strength",
+          "focus": false,
+          "highlight": true,
+          "one_rm_key": "Skull-Crushers"
+        },
+        {
+          "name": "Lateral Raises",
+          "kind": "strength",
+          "scheme": "3\u00d76\u201315 (fatigue dictates weight)",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Inside Hammer Curls",
+          "kind": "strength",
+          "scheme": "2\u00d78\u201310",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Overhead Tricep Extension",
+          "kind": "strength",
+          "scheme": "2\u00d78\u201312",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Archer Pulls",
+          "kind": "strength",
+          "scheme": "2\u00d78\u201310",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Chin-Ups (Max reps)",
+          "kind": "max_reps",
+          "scheme": "1\u00d7 max reps",
+          "block": "strength",
+          "focus": false,
+          "highlight": true
+        },
+        {
+          "name": "Dips (max)",
+          "kind": "max_reps",
+          "scheme": "1\u00d7 max reps",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "1 Mile",
+          "kind": "run",
+          "scheme": "1 mile, fast as possible. Track pace.",
+          "block": "cardio",
+          "focus": false,
+          "highlight": true,
+          "focus_metric": "pace",
+          "fixed_distance": 1,
+          "pb_key": "Mile Time"
+        }
+      ]
+    },
+    {
+      "day": 9,
+      "name": "Core B",
+      "short": "Core B",
+      "is_rest": false,
+      "tag": "Core + flush",
+      "exercises": [
+        {
+          "name": "Sit-ups",
+          "kind": "reps",
+          "scheme": "4\u00d730+",
+          "block": "core",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Side Planks",
+          "kind": "timed",
+          "scheme": "2\u00d745 seconds+",
+          "block": "core",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Supermans",
+          "kind": "timed",
+          "scheme": "2\u00d760 seconds+",
+          "block": "core",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Dead Hang",
+          "kind": "timed",
+          "scheme": "1\u00d7 max",
+          "block": "core",
+          "focus": false,
+          "highlight": true
+        },
+        {
+          "name": "Pistol Squats (BOSU)",
+          "kind": "reps",
+          "scheme": "1\u00d710",
+          "block": "core",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Single-Leg Deadlift (BOSU)",
+          "kind": "reps",
+          "scheme": "1\u00d725",
+          "block": "core",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Flush Cardio",
+          "kind": "cardio_choice",
+          "scheme": "Flush legs with bike or light run",
+          "block": "cardio",
+          "focus": false,
+          "highlight": false
+        }
+      ]
+    }
+  ],
+  "goals": {
+    "Chin-Ups (Max reps)": 20.0,
+    "Weighted Chin-Ups": 135.0,
+    "Overhead Press": 225.0,
+    "Plank": 150.0,
+    "Squat": 425.0,
+    "Trap-Bar Deadlift": 595.0,
+    "Bench": 315.0,
+    "Pull-Ups (reps)": 15.0,
+    "Weighted Pull-Ups": 100.0,
+    "Curls": 155.0,
+    "Skull-Crushers": 155.0,
+    "Mile Time": 7.0,
+    "Push-Ups (reps)": 75.0,
+    "Dead Hang": 90.0
+  },
+  "one_rms": {
+    "Chin-Ups (Max reps)": 14.0,
+    "Weighted Chin-Ups": 100.0,
+    "Overhead Press": 185.0,
+    "Plank": 110.0,
+    "Squat": 405.0,
+    "Trap-Bar Deadlift": 575.0,
+    "Bench": 295.0,
+    "Pull-Ups (reps)": 10.0,
+    "Weighted Pull-Ups": 70.0,
+    "Curls": 135.0,
+    "Skull-Crushers": 135.0,
+    "Mile Time": 8.5,
+    "Push-Ups (reps)": 50.0,
+    "Dead Hang": 60.0
+  },
+  "sessions": [
+    {
+      "id": "3f6ddbe7-c5ab-4eea-9926-ec03dbae1c99",
+      "date": "2026-08-28T13:23:46",
+      "cycle_day": 4,
+      "day_name": "Lower B",
+      "is_rest": false,
+      "lifts": [
+        {
+          "name": "Box Jumps",
+          "kind": "reps",
+          "focus": false,
+          "sets": 3,
+          "reps": 6
+        },
+        {
+          "name": "Squat Power Waves",
+          "kind": "power_wave",
+          "focus": true,
+          "weight": 295.0,
+          "reps": 5
+        },
+        {
+          "name": "Speed Trap Bar",
+          "kind": "strength",
+          "focus": true,
+          "weight": 225.0,
+          "reps": 5,
+          "sets": 6
+        },
+        {
+          "name": "Calf Raises",
+          "kind": "strength",
+          "focus": false,
+          "weight": 135.0,
+          "reps": 15,
+          "sets": 3
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "3a46563c-170f-47c9-8f66-1d90846bf94e",
+      "date": "2026-08-28T16:19:01",
+      "cycle_day": 5,
+      "wave": 1,
+      "program_day": 5,
+      "day_name": "Upper A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Bench Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "weight": 235.0,
+          "reps": 5
+        },
+        {
+          "name": "Weighted Pull-Ups",
+          "kind": "power_wave",
+          "focus": false,
+          "weight": 45.0,
+          "reps": 3,
+          "max_reps": 4
+        },
+        {
+          "name": "Incline DB Press",
+          "kind": "strength",
+          "focus": false,
+          "weight": 70.0,
+          "reps": 10,
+          "sets": 3
+        },
+        {
+          "name": "Bird Dog Rows",
+          "kind": "strength",
+          "focus": false,
+          "weight": 70.0,
+          "reps": 10,
+          "sets": 3
+        },
+        {
+          "name": "Dips",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 9
+        },
+        {
+          "name": "DB Shoulder Press",
+          "kind": "strength",
+          "focus": false,
+          "reps": 8,
+          "sets": 2
+        },
+        {
+          "name": "Band Pull-aparts",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 10
+        },
+        {
+          "name": "Overhead Tricep Extension",
+          "kind": "strength",
+          "focus": false,
+          "weight": 25.0,
+          "reps": 10,
+          "sets": 2
+        }
+      ],
+      "notes": "Got sore quickly - so volume lifts after power waves are pretty weak - beat those next time"
+    }
+  ],
+  "measurements": [
+    {
+      "id": "9ae0c069-7c9c-4f7f-a8c5-8da784f07a86",
+      "date": "2026-08-28T14:08:13",
+      "block": 1,
+      "wave": 1,
+      "program_day": 5,
+      "weight": 213.4,
+      "body_fat": 22.6,
+      "muscle_mass": 154.0,
+      "waist": 39.0,
+      "arm": 16.0,
+      "leg": 25.0,
+      "shoulders": 50.0,
+      "notes": ""
+    }
+  ]
+}

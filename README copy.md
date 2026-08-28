@@ -2,11 +2,6 @@
 
 Workout tracker for custom programs
 
-## Data
-
-I'm leaving the data.json file in there for formatting and so anyone can see how the app looks with some starter data in there - I'd delete it once you're ready to start a program - the app will create another one.
-The app will create/store history there, so it's a one file app with one supporting data file. 
-
 ## Usgae
 
 This is really intended for the user-end rather than a program designer - but changing the program in there right now to anoth program should be fairly straightforward and all app functionality will stay the same. 
