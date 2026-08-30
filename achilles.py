@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import re
 import sys
 import uuid
 from datetime import datetime
@@ -261,7 +262,6 @@ DEFAULT_PROGRAM = [
         "is_rest": False,
         "tag": "Deadlift",
         "exercises": [
-            E("Speed Cleans", "strength", "5×2–3", speed=True),
             E(
                 "Trap-Bar Deadlift Power Waves",
                 "power_wave",
@@ -273,6 +273,7 @@ DEFAULT_PROGRAM = [
             E("Bulgarian Lunges", "strength", "2×8–10"),
             E("Side Lunge Squats (barbell)", "strength", "1×10 each side"),
             E("Hamstring Curls", "strength", "2×12–15"),
+            E("Leg Extensions", "strength", "2×12–15"),
             E("Wall Squat", "timed", "1× max"),
             E("Moderate Bike", "bike", "Moderate bike finisher", "cardio"),
         ],
@@ -334,9 +335,16 @@ def program_is_current(program: Any) -> bool:
     if not isinstance(program[0].get("exercises"), list):
         return False
     day2 = next((d for d in program if d.get("day") == 2), None)
-    if not day2:
+    day7 = next((d for d in program if d.get("day") == 7), None)
+    if not day2 or not day7:
         return False
-    return any(e.get("name") == "Weighted Chin-Ups" for e in day2.get("exercises") or [])
+    names2 = [e.get("name") for e in day2.get("exercises") or []]
+    names7 = [e.get("name") for e in day7.get("exercises") or []]
+    return (
+        "Weighted Chin-Ups" in names2
+        and "Speed Cleans" not in names7
+        and "Leg Extensions" in names7
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -363,10 +371,112 @@ def data_path() -> Path:
     return local
 
 
+WAVE_COUNT_RE = re.compile(r"(\d+)\s*[×x]\s*Power Waves", re.I)
+WARMUP_RE = re.compile(r"\d+\s*[×x]?\s*warm-?ups?", re.I)
+WORK_SET_RE = re.compile(r"(\d+)\s*[×x]\s*(?:\d|max)", re.I)
+
+
 def epley_1rm(weight: float, reps: int) -> float:
     if reps <= 1:
         return weight
     return round(weight * (1 + reps / 30.0), 1)
+
+
+def power_wave_meta(ex: dict[str, Any]) -> dict[str, Any]:
+    scheme = ex.get("scheme") or ""
+    count = int(ex.get("wave_count") or 0)
+    if not count:
+        match = WAVE_COUNT_RE.search(scheme)
+        count = int(match.group(1)) if match else 4
+    if "cooldown" in ex:
+        cooldown = bool(ex.get("cooldown"))
+    else:
+        cooldown = "cool-down" in scheme.lower() or "cooldown" in scheme.lower()
+    return {"count": max(1, count), "cooldown": cooldown, "has_max": bool(ex.get("has_max"))}
+
+
+def scheme_work_count(ex: dict[str, Any], last: dict[str, Any] | None = None) -> int:
+    if ex.get("work_count"):
+        return max(1, int(ex["work_count"]))
+    cleaned = WARMUP_RE.sub(" ", ex.get("scheme") or "")
+    match = WORK_SET_RE.search(cleaned)
+    if match:
+        return max(1, int(match.group(1)))
+    if last:
+        raw = last.get("work_sets")
+        if isinstance(raw, list) and raw:
+            nums = [int(s.get("n") or 0) for s in raw if isinstance(s, dict)]
+            return max(1, max(nums) if nums else len(raw))
+        if last.get("sets"):
+            return max(1, int(last["sets"]))
+    return 2
+
+
+def parse_set_list(raw: Any) -> list[dict[str, Any]]:
+    out: list[dict[str, Any]] = []
+    if not isinstance(raw, list):
+        return out
+    for i, item in enumerate(raw):
+        if not isinstance(item, dict):
+            continue
+        w = float(item.get("weight") or 0)
+        r = int(item.get("reps") or 0)
+        if w or r:
+            out.append({"n": int(item.get("n") or i + 1), "weight": w, "reps": r})
+    return out
+
+
+def working_wave_sets(entry: dict[str, Any]) -> list[dict[str, Any]]:
+    for key in ("wave_sets", "work_sets"):
+        parsed = parse_set_list(entry.get(key))
+        if parsed:
+            return parsed
+    w = float(entry.get("weight") or 0)
+    r = int(entry.get("reps") or 0)
+    if w or r:
+        return [{"n": 1, "weight": w, "reps": r}]
+    return []
+
+
+def last_set_prefill(last: dict[str, Any] | None, index: int) -> dict[str, Any] | None:
+    sets = working_wave_sets(last) if last else []
+    by_n = {int(s.get("n") or i + 1): s for i, s in enumerate(sets)}
+    if index + 1 in by_n:
+        return by_n[index + 1]
+    if len(sets) == 1:
+        return sets[0]
+    return None
+
+
+def format_set_list(sets: list[dict[str, Any]], unit: str) -> str:
+    parts: list[str] = []
+    for item in sets:
+        w, r = item.get("weight"), item.get("reps")
+        if w and r:
+            parts.append(f"{fmt_num(float(w))}×{int(r)}")
+        elif w:
+            parts.append(f"{fmt_num(float(w))} {unit}")
+        elif r:
+            parts.append(f"{int(r)} reps")
+    return "  ·  ".join(parts)
+
+
+def primary_wave_load(entry: dict[str, Any]) -> tuple[float, int]:
+    best_w, best_r, best_e = 0.0, 0, 0.0
+    for item in working_wave_sets(entry):
+        w, r = float(item.get("weight") or 0), int(item.get("reps") or 0)
+        est = epley_1rm(w, r) if w and r else w
+        if est > best_e:
+            best_w, best_r, best_e = w, r, est
+    return best_w, best_r
+
+
+def row_weight_reps(row: dict[str, Any]) -> list[tuple[float, int]]:
+    if row.get("kind") in ("power_wave", "strength") or row.get("wave_sets") or row.get("work_sets"):
+        return [(float(s.get("weight") or 0), int(s.get("reps") or 0)) for s in working_wave_sets(row)]
+    w = float(row.get("weight") or 0)
+    r = int(row.get("reps") or 0)
+    return [(w, r)] if w or r else []
 
 
 def parse_float(value: str) -> float | None:
@@ -537,18 +647,41 @@ def format_logged(entry: dict[str, Any], unit: str) -> str:
             bits.append(f"{sets}×{reps}")
         elif reps:
             bits.append(f"{reps} reps")
-    else:
-        w, s, r = entry.get("weight"), entry.get("sets"), entry.get("reps")
-        if w:
-            bits.append(f"{fmt_num(float(w))} {unit}")
-        if s and r:
-            bits.append(f"{s}×{r}")
-        elif r:
-            bits.append(f"{r} reps")
+    elif kind == "power_wave":
+        waves = working_wave_sets(entry)
+        if waves:
+            bits.append(format_set_list(waves, unit))
+        cd = entry.get("cooldown") if isinstance(entry.get("cooldown"), dict) else {}
+        if cd.get("weight") and cd.get("reps"):
+            bits.append(f"cool-down {fmt_num(float(cd['weight']))}×{int(cd['reps'])}")
+        elif cd.get("weight"):
+            bits.append(f"cool-down {fmt_num(float(cd['weight']))} {unit}")
+        elif cd.get("reps"):
+            bits.append(f"cool-down {int(cd['reps'])} reps")
         if entry.get("max_reps"):
             bits.append(f"max {entry['max_reps']}")
+        w, r = primary_wave_load(entry)
         if w and r:
-            bits.append(f"est. 1RM {fmt_num(epley_1rm(float(w), int(r)))}")
+            bits.append(f"est. 1RM {fmt_num(epley_1rm(w, r))}")
+    else:
+        work = parse_set_list(entry.get("work_sets"))
+        if work:
+            bits.append(format_set_list(work, unit))
+            w, r = primary_wave_load(entry)
+            if w and r:
+                bits.append(f"est. 1RM {fmt_num(epley_1rm(w, r))}")
+        else:
+            w, s, r = entry.get("weight"), entry.get("sets"), entry.get("reps")
+            if w:
+                bits.append(f"{fmt_num(float(w))} {unit}")
+            if s and r:
+                bits.append(f"{s}×{r}")
+            elif r:
+                bits.append(f"{r} reps")
+            if entry.get("max_reps"):
+                bits.append(f"max {entry['max_reps']}")
+            if w and r:
+                bits.append(f"est. 1RM {fmt_num(epley_1rm(float(w), int(r)))}")
     return f"{name}  ·  " + "  ·  ".join(bits) if bits else name
 
 
@@ -821,14 +954,13 @@ class Store:
             if name in ("Chin-Ups (Max reps)", "Pull-Ups (reps)") and row.get("max_reps"):
                 best = max(best, float(row["max_reps"]))
             if metric == "weight":
-                w = float(row.get("weight") or 0)
-                r = int(row.get("reps") or 0)
-                if w and r <= 1:
-                    best = max(best, w)
-                elif w and r > 1:
-                    best = max(best, epley_1rm(w, r))
-                elif w:
-                    best = max(best, w)
+                for w, r in row_weight_reps(row):
+                    if w and r <= 1:
+                        best = max(best, w)
+                    elif w and r > 1:
+                        best = max(best, epley_1rm(w, r))
+                    elif w:
+                        best = max(best, w)
             elif metric == "reps":
                 if row.get("kind") == "power_wave":
                     best = max(best, float(row.get("max_reps") or 0))
@@ -860,10 +992,15 @@ class Store:
                 row.get("kind") == "max_reps" and row.get("reps")
             ):
                 val = float(row["max_reps"])
-            elif metric == "weight" and row.get("weight"):
-                r = int(row.get("reps") or 1)
-                w = float(row["weight"])
-                val = epley_1rm(w, r) if r > 1 else w
+            elif metric == "weight":
+                w, r = primary_wave_load(row) if (
+                    row.get("kind") in ("power_wave", "strength") or row.get("wave_sets") or row.get("work_sets")
+                ) else (
+                    float(row.get("weight") or 0),
+                    int(row.get("reps") or 1),
+                )
+                if w:
+                    val = epley_1rm(w, r) if r > 1 else w
             elif metric == "reps":
                 if row.get("kind") == "power_wave":
                     val = float(row.get("max_reps") or 0)
@@ -947,13 +1084,15 @@ class Store:
         best_weight = best_e1rm = best_reps = best_seconds = best_distance = best_minutes = 0.0
         paces: list[float] = []
         for row in rows:
-            w = float(row.get("weight") or 0)
-            r = int(row.get("reps") or 0)
             mx = int(row.get("max_reps") or 0)
-            best_weight = max(best_weight, w)
-            if w > 0 and r > 0:
-                best_e1rm = max(best_e1rm, epley_1rm(w, r))
-            best_reps = max(best_reps, float(r), float(mx))
+            pairs = row_weight_reps(row)
+            if not pairs:
+                pairs = [(0.0, 0)]
+            for w, r in pairs:
+                best_weight = max(best_weight, w)
+                if w > 0 and r > 0:
+                    best_e1rm = max(best_e1rm, epley_1rm(w, r))
+                best_reps = max(best_reps, float(r), float(mx))
             best_seconds = max(best_seconds, float(row.get("seconds") or 0))
             best_distance = max(best_distance, float(row.get("distance") or 0))
             best_minutes = max(best_minutes, float(row.get("minutes") or 0))
@@ -1446,10 +1585,29 @@ class Achilles:
             add("Sets", "sets", str(int(last["sets"])) if last and last.get("sets") else "", width=90)
             add("Reps", "reps", str(int(last["reps"])) if last and last.get("reps") else "", width=90)
         elif kind == "power_wave":
-            add("Weight", "weight", fmt_num(float(last["weight"])) if last and last.get("weight") else "")
-            add("Wave reps", "reps", str(int(last["reps"])) if last and last.get("reps") else "")
+            meta = power_wave_meta(ex)
+            last_cd = last.get("cooldown") if last and isinstance(last.get("cooldown"), dict) else {}
+            for i in range(meta["count"]):
+                prev = last_set_prefill(last, i)
+                pre_w = fmt_num(float(prev["weight"])) if prev and prev.get("weight") else ""
+                pre_r = str(int(prev["reps"])) if prev and prev.get("reps") else ""
+                add(f"Wave {i + 1} weight", f"pw_w_{i}", "" if pre_w == "—" else pre_w)
+                add(f"Wave {i + 1} reps", f"pw_r_{i}", pre_r, width=110)
+            if meta["cooldown"]:
+                cd_w = fmt_num(float(last_cd["weight"])) if last_cd.get("weight") else ""
+                cd_r = str(int(last_cd["reps"])) if last_cd.get("reps") else ""
+                add("Cool-down weight", "cd_w", "" if cd_w == "—" else cd_w)
+                add("Cool-down reps", "cd_r", cd_r, width=130)
             if ex.get("has_max"):
                 add("Max-set reps", "max_reps", str(int(last["max_reps"])) if last and last.get("max_reps") else "")
+        elif kind == "strength":
+            count = scheme_work_count(ex, last)
+            for i in range(count):
+                prev = last_set_prefill(last, i)
+                pre_w = fmt_num(float(prev["weight"])) if prev and prev.get("weight") else ""
+                pre_r = str(int(prev["reps"])) if prev and prev.get("reps") else ""
+                add(f"Set {i + 1} weight", f"sw_w_{i}", "" if pre_w == "—" else pre_w)
+                add(f"Set {i + 1} reps", f"sw_r_{i}", pre_r, width=110)
         else:
             add("Weight", "weight", fmt_num(float(last["weight"])) if last and last.get("weight") else "")
             add("Sets", "sets", str(int(last["sets"])) if last and last.get("sets") else "", width=90)
@@ -1459,16 +1617,41 @@ class Achilles:
         title = ("★ " if is_highlighted(ex) else "") + ex["name"]
         target = self.store.target_for_exercise(ex)
         if target.get("weight") and kind in ("power_wave", "strength"):
-            wfield = widgets.get("weight")
-            if wfield is not None and (kind == "power_wave" or ex.get("speed")):
-                wfield.value = fmt_num(float(target["weight"]))
+            prefix = "pw_w_" if kind == "power_wave" else "sw_w_"
+            count = power_wave_meta(ex)["count"] if kind == "power_wave" else scheme_work_count(ex, last)
+            if kind == "power_wave" or ex.get("speed"):
+                for i in range(count):
+                    wfield = widgets.get(f"{prefix}{i}")
+                    if wfield is not None:
+                        wfield.value = fmt_num(float(target["weight"]))
+        inputs: list[ft.Control]
+        if kind == "power_wave":
+            meta = power_wave_meta(ex)
+            inputs = []
+            for i in range(meta["count"]):
+                inputs.append(ft.Row(spacing=10, wrap=True, controls=[widgets[f"pw_w_{i}"], widgets[f"pw_r_{i}"]]))
+            extra: list[ft.Control] = []
+            if meta["cooldown"]:
+                extra.extend([widgets["cd_w"], widgets["cd_r"]])
+            if ex.get("has_max"):
+                extra.append(widgets["max_reps"])
+            if extra:
+                inputs.append(ft.Row(spacing=10, wrap=True, controls=extra))
+        elif kind == "strength":
+            count = scheme_work_count(ex, last)
+            inputs = [
+                ft.Row(spacing=10, wrap=True, controls=[widgets[f"sw_w_{i}"], widgets[f"sw_r_{i}"]])
+                for i in range(count)
+            ]
+        else:
+            inputs = [ft.Row(wrap=True, spacing=10, controls=list(widgets.values()))]
         return ft.Column(
             spacing=6,
             controls=[
                 txt(title, size=15, color=GOLD if is_highlighted(ex) else TEXT, weight=ft.FontWeight.W_600),
                 muted(ex.get("scheme", "")),
                 txt(target["label"], size=12, color=GREEN),
-                ft.Row(wrap=True, spacing=10, controls=list(widgets.values())),
+                *inputs,
             ],
         )
 
@@ -1534,6 +1717,63 @@ class Achilles:
             if reps is not None:
                 payload["reps"] = reps
             return payload
+        if kind == "power_wave":
+            meta = power_wave_meta(ex)
+            wave_sets: list[dict[str, Any]] = []
+            for i in range(meta["count"]):
+                w, r = parse_float(val(f"pw_w_{i}")), parse_int(val(f"pw_r_{i}"))
+                if w is None and r is None:
+                    continue
+                item: dict[str, Any] = {"n": i + 1}
+                if w is not None:
+                    item["weight"] = w
+                if r is not None:
+                    item["reps"] = r
+                wave_sets.append(item)
+            cooldown: dict[str, Any] = {}
+            if meta["cooldown"]:
+                cw, cr = parse_float(val("cd_w")), parse_int(val("cd_r"))
+                if cw is not None:
+                    cooldown["weight"] = cw
+                if cr is not None:
+                    cooldown["reps"] = cr
+            max_reps = parse_int(val("max_reps")) if "max_reps" in widgets else None
+            if not wave_sets and not cooldown and not max_reps:
+                return None
+            payload["wave_sets"] = wave_sets
+            if cooldown:
+                payload["cooldown"] = cooldown
+            if max_reps is not None:
+                payload["max_reps"] = max_reps
+            pw, pr = primary_wave_load(payload)
+            if pw:
+                payload["weight"] = pw
+            if pr:
+                payload["reps"] = pr
+            return payload
+        if kind == "strength":
+            count = scheme_work_count(ex)
+            work_sets: list[dict[str, Any]] = []
+            for i in range(count):
+                w, r = parse_float(val(f"sw_w_{i}")), parse_int(val(f"sw_r_{i}"))
+                if w is None and r is None:
+                    continue
+                item = {"n": i + 1}
+                if w is not None:
+                    item["weight"] = w
+                if r is not None:
+                    item["reps"] = r
+                work_sets.append(item)
+            if not work_sets:
+                return None
+            payload["work_sets"] = work_sets
+            payload["sets"] = len(work_sets)
+            pw, pr = primary_wave_load(payload)
+            if pw:
+                payload["weight"] = pw
+            if pr:
+                payload["reps"] = pr
+            return payload
         weight, reps = parse_float(val("weight")), parse_int(val("reps"))
         sets = parse_int(val("sets")) if "sets" in widgets else None
         max_reps = parse_int(val("max_reps")) if "max_reps" in widgets else None
@@ -1552,7 +1792,10 @@ class Achilles:
     def _entry_primary(self, ex: dict[str, Any], entry: dict[str, Any]) -> float:
         metric, _u, _h = goal_spec(ex)
         if metric == "e1rm":
-            w, r = float(entry.get("weight") or 0), int(entry.get("reps") or 0)
+            if entry.get("kind") in ("power_wave", "strength") or entry.get("wave_sets") or entry.get("work_sets"):
+                w, r = primary_wave_load(entry)
+            else:
+                w, r = float(entry.get("weight") or 0), int(entry.get("reps") or 0)
             return epley_1rm(w, r) if w and r else 0
         return float(entry.get(metric) or entry.get("reps") or entry.get("max_reps") or 0)
 

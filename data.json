@@ -2,7 +2,7 @@
   "version": 5,
   "unit": "lb",
   "wave": 1,
-  "next_day": 6,
+  "next_day": 8,
   "block": 1,
   "program": [
     {
@@ -346,15 +346,6 @@
       "tag": "Deadlift",
       "exercises": [
         {
-          "name": "Speed Cleans",
-          "kind": "strength",
-          "scheme": "5\u00d72\u20133",
-          "block": "strength",
-          "focus": false,
-          "highlight": false,
-          "speed": true
-        },
-        {
           "name": "Trap-Bar Deadlift Power Waves",
           "kind": "power_wave",
           "scheme": "3\u00d7 warm-up, 4\u00d7 Power Waves, 1\u00d7 cool-down",
@@ -391,6 +382,14 @@
         },
         {
           "name": "Hamstring Curls",
+          "kind": "strength",
+          "scheme": "2\u00d712\u201315",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Leg Extensions",
           "kind": "strength",
           "scheme": "2\u00d712\u201315",
           "block": "strength",
@@ -719,6 +718,191 @@
         }
       ],
       "notes": "Got sore quickly - so volume lifts after power waves are pretty weak - beat those next time"
+    },
+    {
+      "id": "aca3770a-564d-4265-aea9-5cba47f49dc6",
+      "date": "2026-08-30T12:27:55",
+      "cycle_day": 6,
+      "wave": 1,
+      "program_day": 6,
+      "day_name": "Tempo Run",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Tempo Run",
+          "kind": "run",
+          "focus": false,
+          "distance": 1.0,
+          "pace": 9.15
+        }
+      ],
+      "notes": "First mile in a long time, legs sore and back hurt, but pace felt easier than I was expecting. Hips might be more flexible after years of deadlinfting"
+    },
+    {
+      "id": "32f21f26-b0bb-423c-9d92-f1de1844c28b",
+      "date": "2026-08-30T16:47:58",
+      "cycle_day": 7,
+      "wave": 1,
+      "program_day": 7,
+      "day_name": "Lower A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Trap-Bar Deadlift Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 455.0,
+              "reps": 5
+            },
+            {
+              "n": 2,
+              "weight": 455.0,
+              "reps": 4
+            },
+            {
+              "n": 3,
+              "weight": 455.0,
+              "reps": 3
+            },
+            {
+              "n": 4,
+              "weight": 405.0,
+              "reps": 6
+            }
+          ],
+          "cooldown": {
+            "weight": 315.0,
+            "reps": 10
+          },
+          "weight": 455.0,
+          "reps": 5
+        },
+        {
+          "name": "Speed Squats",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 145.0,
+              "reps": 5
+            },
+            {
+              "n": 2,
+              "weight": 195.0,
+              "reps": 5
+            },
+            {
+              "n": 3,
+              "weight": 235.0,
+              "reps": 5
+            },
+            {
+              "n": 4,
+              "weight": 235.0,
+              "reps": 5
+            },
+            {
+              "n": 5,
+              "weight": 235.0,
+              "reps": 5
+            },
+            {
+              "n": 6,
+              "weight": 235.0,
+              "reps": 5
+            }
+          ],
+          "sets": 6,
+          "weight": 235.0,
+          "reps": 5
+        },
+        {
+          "name": "Bulgarian Lunges",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 105.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 105.0,
+              "reps": 8
+            }
+          ],
+          "sets": 2,
+          "weight": 105.0,
+          "reps": 8
+        },
+        {
+          "name": "Side Lunge Squats (barbell)",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 55.0,
+              "reps": 10
+            }
+          ],
+          "sets": 1,
+          "weight": 55.0,
+          "reps": 10
+        },
+        {
+          "name": "Hamstring Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 200.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 240.0,
+              "reps": 8
+            }
+          ],
+          "sets": 2,
+          "weight": 240.0,
+          "reps": 8
+        },
+        {
+          "name": "Leg Extensions",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 205.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 205.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 205.0,
+          "reps": 12
+        },
+        {
+          "name": "Wall Squat",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 92.0
+        }
+      ],
+      "notes": "No bike - two softball games later to flush the legs!"
     }
   ],
   "measurements": [
