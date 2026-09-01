@@ -289,8 +289,9 @@ DEFAULT_PROGRAM = [
             E("Curls", "power_wave", "1× warm-up, 3× Power Waves", highlight=True, one_rm_key="Curls"),
             E("Skull-crushers", "power_wave", "1× warm-up, 3× Power Waves", highlight=True, one_rm_key="Skull-Crushers"),
             E("Lateral Raises", "strength", "3×6–15 (fatigue dictates weight)"),
-            E("Inside Hammer Curls", "strength", "2×8–10"),
-            E("Overhead Tricep Extension", "strength", "2×8–12"),
+            E("Inside Hammer Curls", "strength", "3×8–10"),
+            E("Overhead Tricep Extension", "strength", "3×8–12"),
+            E("DB Shoulder Press", "strength", "3×8–12"),
             E("Archer Pulls", "strength", "2×8–10"),
             E("Chin-Ups (Max reps)", "max_reps", "1× max reps", highlight=True),
             E("Dips (max)", "max_reps", "1× max reps"),
@@ -336,14 +337,20 @@ def program_is_current(program: Any) -> bool:
         return False
     day2 = next((d for d in program if d.get("day") == 2), None)
     day7 = next((d for d in program if d.get("day") == 7), None)
-    if not day2 or not day7:
+    day8 = next((d for d in program if d.get("day") == 8), None)
+    if not day2 or not day7 or not day8:
         return False
     names2 = [e.get("name") for e in day2.get("exercises") or []]
     names7 = [e.get("name") for e in day7.get("exercises") or []]
+    names8 = [e.get("name") for e in day8.get("exercises") or []]
+    hammers = next((e for e in (day8.get("exercises") or []) if e.get("name") == "Inside Hammer Curls"), None)
+    hammer_scheme = (hammers or {}).get("scheme") or ""
     return (
         "Weighted Chin-Ups" in names2
         and "Speed Cleans" not in names7
         and "Leg Extensions" in names7
+        and "DB Shoulder Press" in names8
+        and hammer_scheme.startswith("3")
     )
 
 
