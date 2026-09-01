@@ -717,6 +717,18 @@ def metric_text(metric: str, value: float, unit: str) -> str:
     return f"{fmt_num(value)} {unit}"
 
 
+def y_format_for_metric(metric: str) -> Callable[[float], str]:
+    if metric == "pace":
+        return format_pace
+    if metric == "seconds":
+        return format_seconds
+    return fmt_num
+
+
+def chart_lift_key(ex: dict[str, Any]) -> str:
+    return str(ex.get("one_rm_key") or ex.get("pb_key") or ex["name"])
+
+
 def chart_shapes(
     width: float,
     height: float,
@@ -925,7 +937,14 @@ class Store:
                 dt = None
             for entry in session.get("lifts", []):
                 if entry.get("name") in wanted:
-                    rows.append({"date": session["date"], "dt": dt, **entry})
+                    rows.append(
+                        {
+                            **entry,
+                            "date": session["date"],
+                            "dt": dt,
+                            "session_wave": session.get("wave"),
+                        }
+                    )
         return rows
 
     def sessions_for_name(self, name: str) -> list[dict[str, Any]]:
@@ -1022,6 +1041,92 @@ class Store:
             if val:
                 points.append((dt, val))
         return points
+
+    def starred_chart_specs(self) -> list[dict[str, Any]]:
+        by_key: dict[str, dict[str, Any]] = {}
+        for ex in self.all_focus_exercises():
+            by_key[chart_lift_key(ex)] = ex
+            max_key = ex.get("max_pb_key")
+            if ex.get("has_max") and max_key:
+                by_key.setdefault(str(max_key), ex)
+
+        specs: list[dict[str, Any]] = []
+        for pb in PB_LIFTS:
+            key = pb["name"]
+            ex = by_key.get(key)
+            kind = "strength"
+            if ex:
+                if ex.get("max_pb_key") == key and chart_lift_key(ex) != key:
+                    kind = "max_reps"
+                else:
+                    kind = str(ex.get("kind") or "strength")
+            specs.append(
+                {
+                    "key": key,
+                    "title": key,
+                    "kind": kind,
+                    "ex": ex or {"name": key, "kind": kind},
+                    "metric": pb["metric"],
+                    "unit": pb["unit"],
+                }
+            )
+        return specs
+
+    def strength_chart_series(
+        self, spec: dict[str, Any]
+    ) -> list[tuple[str, str, list[tuple[datetime, float]]]]:
+        key = spec["key"]
+        kind = spec["kind"]
+        if kind == "power_wave":
+            estimated: list[tuple[datetime, float]] = []
+            tested: list[tuple[datetime, float]] = []
+            for row in self.sessions_for_name(key):
+                if row.get("name") in SPEED_NAMES:
+                    continue
+                dt = row.get("dt")
+                if not dt:
+                    try:
+                        dt = datetime.fromisoformat(row["date"])
+                    except (KeyError, ValueError):
+                        continue
+                w, r = primary_wave_load(row)
+                if not w:
+                    continue
+                wave = int(row.get("session_wave") or 0)
+                if wave == 4:
+                    singles = [sw for sw, sr in row_weight_reps(row) if sw and sr <= 1]
+                    val = max(singles) if singles else (epley_1rm(w, r) if r > 1 else w)
+                    tested.append((dt, val))
+                else:
+                    estimated.append((dt, epley_1rm(w, r) if r > 1 else w))
+            series: list[tuple[str, str, list[tuple[datetime, float]]]] = []
+            if estimated:
+                series.append(("Estimated 1RM", GOLD, estimated))
+            if tested:
+                series.append(("Tested 1RM", BLUE, tested))
+            return series
+        if kind == "max_reps":
+            pts = list(self.pb_history(key))
+            parent = (spec.get("ex") or {}).get("name")
+            if parent and parent != key:
+                seen = {(d.isoformat(), v) for d, v in pts}
+                for row in self.sessions_for_name(parent):
+                    dt = row.get("dt")
+                    if not dt:
+                        try:
+                            dt = datetime.fromisoformat(row["date"])
+                        except (KeyError, ValueError):
+                            continue
+                    val = float(row.get("max_reps") or 0)
+                    if val and (dt.isoformat(), val) not in seen:
+                        pts.append((dt, val))
+                        seen.add((dt.isoformat(), val))
+            pts.sort(key=lambda p: p[0])
+            return [(spec["title"], GOLD, pts)] if pts else []
+        pts = self.pb_history(key)
+        if not pts:
+            return []
+        return [(spec["title"], GOLD, pts)]
 
     def last_marathon(self) -> dict[str, Any] | None:
         return self.last_for_name("Marathon Builder")
@@ -1918,26 +2023,35 @@ class Achilles:
                     ),
                 )
             )
-        series = []
-        for i, spec in enumerate(PB_LIFTS):
-            if spec["metric"] != "weight":
-                continue
-            pts = self.store.pb_history(spec["name"])
-            if pts:
-                series.append((spec["name"], CHART_COLORS[i % len(CHART_COLORS)], pts))
-        seeded = []
-        if not series:
-            for i, name in enumerate(TOTAL_LIFTS):
-                rm = self.store.one_rm(name)
-                if rm:
-                    seeded.append((name, CHART_COLORS[i], [(datetime.now(), rm)]))
-        plot_series = series or seeded
+        plots: list[ft.Control] = []
+        for spec in self.store.starred_chart_specs():
+            series = self.store.strength_chart_series(spec)
+            unit = spec.get("unit") or ""
+            if spec["kind"] == "power_wave":
+                caption = "Gold = estimated 1RM from power waves  ·  Blue = tested 1RM on wave 4"
+                if unit:
+                    caption = f"{unit}  ·  {caption}"
+            else:
+                caption = unit or spec["metric"]
+            plots.append(
+                panel(
+                    ft.Column(
+                        [
+                            txt(spec["title"], size=14, weight=ft.FontWeight.W_600),
+                            muted(caption),
+                            time_chart(series, 200, y_formatter=y_format_for_metric(spec["metric"])),
+                        ],
+                        spacing=6,
+                    )
+                )
+            )
         return [
             header,
             muted("Current bests for the lifts on your PB list. Wave loads use these 1RMs."),
             ft.ResponsiveRow(controls=cards, spacing=12, run_spacing=12),
-            muted("STRENGTH OVER TIME"),
-            panel(time_chart(plot_series, 260)),
+            muted("PB GOALS OVER TIME"),
+            muted("One chart per PB Goals lift. Power-wave lifts split estimated 1RM (waves 1–3) from a tested 1RM on wave 4."),
+            *plots,
         ]
 
     # ----- Goals -----
