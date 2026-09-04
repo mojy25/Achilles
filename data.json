@@ -2,7 +2,7 @@
   "version": 5,
   "unit": "lb",
   "wave": 1,
-  "next_day": 9,
+  "next_day": 3,
   "block": 1,
   "program": [
     {
@@ -1061,6 +1061,189 @@
         }
       ],
       "notes": "EZ bar easier than DBs.\nCould go heavier on inside curl / overhead superset. \nThick bar on chin-ups, hand grip didn't have it - also going to be harder after the curls naturally.\nShoulder pain on dips hence low rep count, probably had the strength to do 15-18. Overall this is a pretty good arm touch up... maybe stretch the arm superset to 3 sets and add in a db press?"
+    },
+    {
+      "id": "fef6f3fd-5ea0-4566-8407-794c544dc783",
+      "date": "2026-09-04T13:11:59",
+      "cycle_day": 1,
+      "wave": 1,
+      "program_day": 1,
+      "day_name": "Marathon Builder",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Marathon Builder",
+          "kind": "run",
+          "focus": false,
+          "distance": 0.5,
+          "pace": 9.5
+        }
+      ],
+      "notes": "Back pain. This is a pitiful run but it's going to take a few weeks for the back to tolerate this - keep getting your step counts high and running as much as you can"
+    },
+    {
+      "id": "bdb7605b-6905-46c2-a531-aefd5659ce62",
+      "date": "2026-09-04T16:01:53",
+      "cycle_day": 2,
+      "wave": 1,
+      "program_day": 2,
+      "day_name": "Upper B",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Weighted Chin-Ups",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 70.0,
+              "reps": 3
+            },
+            {
+              "n": 2,
+              "weight": 70.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 45.0,
+              "reps": 4
+            },
+            {
+              "n": 4,
+              "weight": 45.0,
+              "reps": 4
+            }
+          ],
+          "max_reps": 10,
+          "weight": 70.0,
+          "reps": 3
+        },
+        {
+          "name": "Overhead Press",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 6
+            },
+            {
+              "n": 2,
+              "weight": 155.0,
+              "reps": 4
+            },
+            {
+              "n": 3,
+              "weight": 155.0,
+              "reps": 4
+            },
+            {
+              "n": 4,
+              "weight": 155.0,
+              "reps": 4
+            }
+          ],
+          "weight": 155.0,
+          "reps": 4
+        },
+        {
+          "name": "Chest-Supported DB Row",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 85.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 55.0,
+              "reps": 12
+            },
+            {
+              "n": 3,
+              "weight": 55.0,
+              "reps": 12
+            }
+          ],
+          "sets": 3,
+          "weight": 85.0,
+          "reps": 8
+        },
+        {
+          "name": "DB Bench",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 85.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 85.0,
+              "reps": 8
+            },
+            {
+              "n": 3,
+              "weight": 85.0,
+              "reps": 8
+            }
+          ],
+          "sets": 3,
+          "weight": 85.0,
+          "reps": 8
+        },
+        {
+          "name": "Row Machine",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 100.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 100.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 100.0,
+          "reps": 12
+        },
+        {
+          "name": "Accessory Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "reps": 10
+            }
+          ],
+          "sets": 2
+        },
+        {
+          "name": "Band Pull-aparts",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 12
+        }
+      ],
+      "notes": "No bike - lots of steps.\nChin-ups were hard - but varied grip and did OHP first. \nSeated rows, went for strong form instead of weight - no lat pull down was available and the gym was very crowded. Still not there stamina wise or power wise but the strength is mostly there."
     }
   ],
   "measurements": [
