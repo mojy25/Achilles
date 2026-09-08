@@ -232,10 +232,12 @@ DEFAULT_PROGRAM = [
             ),
             E("Incline DB Press", "strength", "3×8–10"),
             E("Bird Dog Rows", "strength", "3×8–10"),
-            E("Dips", "max_reps", "2× max"),
+            E("Chest Press", "strength", "2×8–15"),
             E("DB Shoulder Press", "strength", "2×8–10"),
             E("Band Pull-aparts", "reps", "2×12–15"),
             E("Overhead Tricep Extension", "strength", "2×10"),
+            E("Accessory Curls", "strength", "2×15–10"),
+            E("Pec Deck", "strength", "2×8–10"),
             E("Moderate Run", "run", "Moderate run finisher", "cardio", focus_metric="pace"),
         ],
     },
@@ -336,17 +338,22 @@ def program_is_current(program: Any) -> bool:
     if not isinstance(program[0].get("exercises"), list):
         return False
     day2 = next((d for d in program if d.get("day") == 2), None)
+    day5 = next((d for d in program if d.get("day") == 5), None)
     day7 = next((d for d in program if d.get("day") == 7), None)
     day8 = next((d for d in program if d.get("day") == 8), None)
-    if not day2 or not day7 or not day8:
+    if not day2 or not day5 or not day7 or not day8:
         return False
     names2 = [e.get("name") for e in day2.get("exercises") or []]
+    names5 = [e.get("name") for e in day5.get("exercises") or []]
     names7 = [e.get("name") for e in day7.get("exercises") or []]
     names8 = [e.get("name") for e in day8.get("exercises") or []]
     hammers = next((e for e in (day8.get("exercises") or []) if e.get("name") == "Inside Hammer Curls"), None)
     hammer_scheme = (hammers or {}).get("scheme") or ""
     return (
         "Weighted Chin-Ups" in names2
+        and "Chest Press" in names5
+        and "Pec Deck" in names5
+        and "Dips" not in names5
         and "Speed Cleans" not in names7
         and "Leg Extensions" in names7
         and "DB Shoulder Press" in names8

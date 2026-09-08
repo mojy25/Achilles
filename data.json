@@ -2,7 +2,7 @@
   "version": 5,
   "unit": "lb",
   "wave": 1,
-  "next_day": 3,
+  "next_day": 6,
   "block": 1,
   "program": [
     {
@@ -278,9 +278,9 @@
           "highlight": false
         },
         {
-          "name": "Dips",
-          "kind": "max_reps",
-          "scheme": "2\u00d7 max",
+          "name": "Chest Press",
+          "kind": "strength",
+          "scheme": "2\u00d78\u201315",
           "block": "strength",
           "focus": false,
           "highlight": false
@@ -305,6 +305,22 @@
           "name": "Overhead Tricep Extension",
           "kind": "strength",
           "scheme": "2\u00d710",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Accessory Curls",
+          "kind": "strength",
+          "scheme": "2\u00d715\u201310",
+          "block": "strength",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Pec Deck",
+          "kind": "strength",
+          "scheme": "2\u00d78\u201310",
           "block": "strength",
           "focus": false,
           "highlight": false
@@ -1244,6 +1260,402 @@
         }
       ],
       "notes": "No bike - lots of steps.\nChin-ups were hard - but varied grip and did OHP first. \nSeated rows, went for strong form instead of weight - no lat pull down was available and the gym was very crowded. Still not there stamina wise or power wise but the strength is mostly there."
+    },
+    {
+      "id": "90f37855-9154-4bf1-a990-1cdd4821f6dd",
+      "date": "2026-09-06T16:17:51",
+      "cycle_day": 3,
+      "wave": 1,
+      "program_day": 3,
+      "day_name": "Core A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Sit-ups",
+          "kind": "reps",
+          "focus": false,
+          "sets": 3,
+          "reps": 30
+        },
+        {
+          "name": "Plank",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 62.0
+        },
+        {
+          "name": "Russian Twists",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 100,
+          "weight": 0.0
+        },
+        {
+          "name": "Alternating Toe Taps",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 16
+        }
+      ],
+      "notes": "Need WD-40 for bike... got lots of steps. Hips were really tight so I stopped a few things a bit early - did 3 sets of tire flips as well (heavier one outside) - core is decently sore - Also did some leg lifts on the vertical mount"
+    },
+    {
+      "id": "3bdc3b72-ece3-4e9f-9cb7-ee098845cc1b",
+      "date": "2026-09-06T17:24:33",
+      "cycle_day": 4,
+      "wave": 1,
+      "program_day": 4,
+      "day_name": "Lower B",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Box Jumps",
+          "kind": "reps",
+          "focus": false,
+          "sets": 3,
+          "reps": 6
+        },
+        {
+          "name": "Squat Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 325.0,
+              "reps": 4
+            },
+            {
+              "n": 2,
+              "weight": 325.0,
+              "reps": 4
+            },
+            {
+              "n": 3,
+              "weight": 325.0,
+              "reps": 4
+            },
+            {
+              "n": 4,
+              "weight": 325.0,
+              "reps": 4
+            }
+          ],
+          "weight": 325.0,
+          "reps": 4
+        },
+        {
+          "name": "Speed Trap Bar",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 275.0,
+              "reps": 5
+            },
+            {
+              "n": 2,
+              "weight": 275.0,
+              "reps": 5
+            },
+            {
+              "n": 3,
+              "weight": 275.0,
+              "reps": 5
+            },
+            {
+              "n": 4,
+              "weight": 275.0,
+              "reps": 5
+            },
+            {
+              "n": 5,
+              "weight": 275.0,
+              "reps": 5
+            },
+            {
+              "n": 6,
+              "weight": 275.0,
+              "reps": 5
+            }
+          ],
+          "sets": 6,
+          "weight": 275.0,
+          "reps": 5
+        },
+        {
+          "name": "Calf Raises",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 135.0,
+              "reps": 15
+            },
+            {
+              "n": 3,
+              "weight": 135.0,
+              "reps": 15
+            }
+          ],
+          "sets": 3,
+          "weight": 135.0,
+          "reps": 15
+        },
+        {
+          "name": "Leg Extensions",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 205.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 205.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 205.0,
+          "reps": 12
+        }
+      ],
+      "notes": "Had to cut short - not a lot of time today. Squats were as deep as I could go and with short breaks - could probably do heavier in a longer session with more stretching and warm ups. Same goes for speed trap bars, I did all sets on the start of the minute and executed well. Hips and back still sore for sure - stretch more"
+    },
+    {
+      "id": "ca4ca123-e431-42e6-8af3-bc3c5a55f202",
+      "date": "2026-09-07T21:31:16",
+      "cycle_day": 5,
+      "wave": 1,
+      "program_day": 5,
+      "day_name": "Upper A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Bench Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 2,
+              "weight": 235.0,
+              "reps": 4
+            },
+            {
+              "n": 3,
+              "weight": 235.0,
+              "reps": 4
+            },
+            {
+              "n": 4,
+              "weight": 235.0,
+              "reps": 4
+            }
+          ],
+          "cooldown": {
+            "weight": 135.0,
+            "reps": 15
+          },
+          "weight": 235.0,
+          "reps": 4
+        },
+        {
+          "name": "Weighted Pull-Ups",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 45.0,
+              "reps": 4
+            },
+            {
+              "n": 2,
+              "weight": 45.0,
+              "reps": 4
+            },
+            {
+              "n": 3,
+              "weight": 45.0,
+              "reps": 4
+            },
+            {
+              "n": 4,
+              "weight": 45.0,
+              "reps": 3
+            }
+          ],
+          "max_reps": 8,
+          "weight": 45.0,
+          "reps": 4
+        },
+        {
+          "name": "Incline DB Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 75.0,
+              "reps": 9
+            },
+            {
+              "n": 3,
+              "weight": 75.0,
+              "reps": 8
+            }
+          ],
+          "sets": 3,
+          "weight": 75.0,
+          "reps": 10
+        },
+        {
+          "name": "Bird Dog Rows",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 75.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 75.0,
+          "reps": 10
+        },
+        {
+          "name": "Chest Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 180.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 180.0,
+              "reps": 5
+            }
+          ],
+          "sets": 2,
+          "weight": 180.0,
+          "reps": 8
+        },
+        {
+          "name": "DB Shoulder Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "reps": 9
+            }
+          ],
+          "sets": 2
+        },
+        {
+          "name": "Band Pull-aparts",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 15
+        },
+        {
+          "name": "Overhead Tricep Extension",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 27.5,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 30.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 30.0,
+          "reps": 12
+        },
+        {
+          "name": "Accessory Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "reps": 20
+            },
+            {
+              "n": 2,
+              "reps": 15
+            }
+          ],
+          "sets": 2
+        },
+        {
+          "name": "Pec Deck",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 200.0,
+              "reps": 9
+            },
+            {
+              "n": 2,
+              "weight": 200.0,
+              "reps": 7
+            }
+          ],
+          "sets": 2,
+          "weight": 200.0,
+          "reps": 9
+        }
+      ],
+      "notes": "Back pain still preventing accessory run since I need to save it for tempo run tomorrow - Added more chest volume since I'm not benching as much now. Shoulders hurt on dips previously so good exercise to replace."
     }
   ],
   "measurements": [
