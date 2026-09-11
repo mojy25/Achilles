@@ -288,15 +288,17 @@ DEFAULT_PROGRAM = [
         "tag": "Arms + mile",
         "exercises": [
             E("Push-ups", "max_reps", "1× max reps", highlight=True, pb_key="Push-Ups (reps)"),
-            E("Curls", "power_wave", "1× warm-up, 3× Power Waves", highlight=True, one_rm_key="Curls"),
-            E("Skull-crushers", "power_wave", "1× warm-up, 3× Power Waves", highlight=True, one_rm_key="Skull-Crushers"),
+            E("Pec Deck", "strength", "3×8–10"),
+            E("Curls", "power_wave", "1× warm-up, 3× Power Waves", highlight=True, one_rm_key="Curls", log_warmup=True),
+            E("Skull-crushers", "power_wave", "1× warm-up, 3× Power Waves", highlight=True, one_rm_key="Skull-Crushers", log_warmup=True),
             E("Lateral Raises", "strength", "3×6–15 (fatigue dictates weight)"),
             E("Inside Hammer Curls", "strength", "3×8–10"),
             E("Overhead Tricep Extension", "strength", "3×8–12"),
             E("DB Shoulder Press", "strength", "3×8–12"),
-            E("Archer Pulls", "strength", "2×8–10"),
+            E("Tricep Pushdown (cable)", "strength", "3×8–10"),
             E("Chin-Ups (Max reps)", "max_reps", "1× max reps", highlight=True),
             E("Dips (max)", "max_reps", "1× max reps"),
+            E("Seated Tricep Pushdown (machine)", "strength", "2×8–12"),
             E(
                 "1 Mile",
                 "run",
@@ -357,6 +359,10 @@ def program_is_current(program: Any) -> bool:
         and "Speed Cleans" not in names7
         and "Leg Extensions" in names7
         and "DB Shoulder Press" in names8
+        and "Pec Deck" in names8
+        and "Tricep Pushdown (cable)" in names8
+        and "Seated Tricep Pushdown (machine)" in names8
+        and "Archer Pulls" not in names8
         and hammer_scheme.startswith("3")
     )
 
@@ -406,7 +412,21 @@ def power_wave_meta(ex: dict[str, Any]) -> dict[str, Any]:
         cooldown = bool(ex.get("cooldown"))
     else:
         cooldown = "cool-down" in scheme.lower() or "cooldown" in scheme.lower()
-    return {"count": max(1, count), "cooldown": cooldown, "has_max": bool(ex.get("has_max"))}
+    if "log_warmup" in ex:
+        warmup = bool(ex.get("log_warmup"))
+    else:
+        warmup = False
+    warmup_count = 1
+    if warmup:
+        wm = re.search(r"(\d+)\s*[×x]\s*warm-?ups?", scheme, re.I)
+        warmup_count = int(wm.group(1)) if wm else 1
+    return {
+        "count": max(1, count),
+        "cooldown": cooldown,
+        "has_max": bool(ex.get("has_max")),
+        "warmup": warmup,
+        "warmup_count": max(1, warmup_count),
+    }
 
 
 def scheme_work_count(ex: dict[str, Any], last: dict[str, Any] | None = None) -> int:
@@ -662,6 +682,16 @@ def format_logged(entry: dict[str, Any], unit: str) -> str:
         elif reps:
             bits.append(f"{reps} reps")
     elif kind == "power_wave":
+        wu = entry.get("warmup") if isinstance(entry.get("warmup"), dict) else {}
+        if wu.get("weight") and wu.get("reps"):
+            bits.append(f"warm-up {fmt_num(float(wu['weight']))}×{int(wu['reps'])}")
+        elif wu.get("weight"):
+            bits.append(f"warm-up {fmt_num(float(wu['weight']))} {unit}")
+        elif wu.get("reps"):
+            bits.append(f"warm-up {int(wu['reps'])} reps")
+        wu_sets = parse_set_list(entry.get("warmup_sets"))
+        if wu_sets:
+            bits.append("warm-up " + format_set_list(wu_sets, unit))
         waves = working_wave_sets(entry)
         if waves:
             bits.append(format_set_list(waves, unit))
@@ -1706,6 +1736,18 @@ class Achilles:
         elif kind == "power_wave":
             meta = power_wave_meta(ex)
             last_cd = last.get("cooldown") if last and isinstance(last.get("cooldown"), dict) else {}
+            last_wu = last.get("warmup") if last and isinstance(last.get("warmup"), dict) else {}
+            last_wu_sets = parse_set_list(last.get("warmup_sets")) if last else []
+            if last_wu and not last_wu_sets:
+                last_wu_sets = [{"n": 1, **last_wu}]
+            if meta["warmup"]:
+                for i in range(meta["warmup_count"]):
+                    prev = last_wu_sets[i] if i < len(last_wu_sets) else (last_wu_sets[0] if len(last_wu_sets) == 1 else None)
+                    pre_w = fmt_num(float(prev["weight"])) if prev and prev.get("weight") else ""
+                    pre_r = str(int(prev["reps"])) if prev and prev.get("reps") else ""
+                    label = "Warm-up" if meta["warmup_count"] == 1 else f"Warm-up {i + 1}"
+                    add(f"{label} weight", f"wu_w_{i}", "" if pre_w == "—" else pre_w)
+                    add(f"{label} reps", f"wu_r_{i}", pre_r, width=110)
             for i in range(meta["count"]):
                 prev = last_set_prefill(last, i)
                 pre_w = fmt_num(float(prev["weight"])) if prev and prev.get("weight") else ""
@@ -1747,6 +1789,9 @@ class Achilles:
         if kind == "power_wave":
             meta = power_wave_meta(ex)
             inputs = []
+            if meta["warmup"]:
+                for i in range(meta["warmup_count"]):
+                    inputs.append(ft.Row(spacing=10, wrap=True, controls=[widgets[f"wu_w_{i}"], widgets[f"wu_r_{i}"]]))
             for i in range(meta["count"]):
                 inputs.append(ft.Row(spacing=10, wrap=True, controls=[widgets[f"pw_w_{i}"], widgets[f"pw_r_{i}"]]))
             extra: list[ft.Control] = []
@@ -1849,6 +1894,21 @@ class Achilles:
                 if r is not None:
                     item["reps"] = r
                 wave_sets.append(item)
+            warmup: dict[str, Any] = {}
+            warmup_sets: list[dict[str, Any]] = []
+            if meta["warmup"]:
+                for i in range(meta["warmup_count"]):
+                    ww, wr = parse_float(val(f"wu_w_{i}")), parse_int(val(f"wu_r_{i}"))
+                    if ww is None and wr is None:
+                        continue
+                    witem: dict[str, Any] = {"n": i + 1}
+                    if ww is not None:
+                        witem["weight"] = ww
+                    if wr is not None:
+                        witem["reps"] = wr
+                    warmup_sets.append(witem)
+                if len(warmup_sets) == 1:
+                    warmup = {k: v for k, v in warmup_sets[0].items() if k != "n"}
             cooldown: dict[str, Any] = {}
             if meta["cooldown"]:
                 cw, cr = parse_float(val("cd_w")), parse_int(val("cd_r"))
@@ -1857,9 +1917,13 @@ class Achilles:
                 if cr is not None:
                     cooldown["reps"] = cr
             max_reps = parse_int(val("max_reps")) if "max_reps" in widgets else None
-            if not wave_sets and not cooldown and not max_reps:
+            if not wave_sets and not cooldown and not max_reps and not warmup_sets:
                 return None
             payload["wave_sets"] = wave_sets
+            if warmup:
+                payload["warmup"] = warmup
+            elif warmup_sets:
+                payload["warmup_sets"] = warmup_sets
             if cooldown:
                 payload["cooldown"] = cooldown
             if max_reps is not None:
