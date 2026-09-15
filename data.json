@@ -2,7 +2,7 @@
   "version": 5,
   "unit": "lb",
   "wave": 2,
-  "next_day": 1,
+  "next_day": 3,
   "block": 1,
   "program": [
     {
@@ -2115,6 +2115,213 @@
         }
       ],
       "notes": "Planning for a moderate bike ride later in the night"
+    },
+    {
+      "id": "344d6a9d-9eda-477d-9a26-c880e31a9754",
+      "date": "2026-09-14T23:12:41",
+      "cycle_day": 1,
+      "wave": 2,
+      "program_day": 10,
+      "day_name": "Marathon Builder",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Marathon Builder",
+          "kind": "run",
+          "focus": false,
+          "distance": 1.0,
+          "pace": 10.083333333333334
+        }
+      ],
+      "notes": "Tried to run slower to help with the back pain - did not help - so picked pace back up - two breaks to egt the mile done"
+    },
+    {
+      "id": "62cb1567-d291-41b5-a9a6-c5c21f3c63f7",
+      "date": "2026-09-14T23:15:59",
+      "cycle_day": 2,
+      "wave": 2,
+      "program_day": 11,
+      "day_name": "Upper B",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Weighted Chin-Ups",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 75.0,
+              "reps": 3
+            },
+            {
+              "n": 2,
+              "weight": 85.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 75.0,
+              "reps": 3
+            },
+            {
+              "n": 4,
+              "weight": 75.0,
+              "reps": 3
+            }
+          ],
+          "max_reps": 10,
+          "weight": 85.0,
+          "reps": 3
+        },
+        {
+          "name": "Overhead Press",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 155.0,
+              "reps": 4
+            },
+            {
+              "n": 2,
+              "weight": 185.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 135.0,
+              "reps": 8
+            },
+            {
+              "n": 4,
+              "weight": 135.0,
+              "reps": 10
+            }
+          ],
+          "weight": 185.0,
+          "reps": 3
+        },
+        {
+          "name": "Chest-Supported DB Row",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 75.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 75.0,
+          "reps": 10
+        },
+        {
+          "name": "DB Bench",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 80.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 90.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 100.0,
+              "reps": 8
+            }
+          ],
+          "sets": 3,
+          "weight": 100.0,
+          "reps": 8
+        },
+        {
+          "name": "Row Machine",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 135.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 135.0,
+          "reps": 10
+        },
+        {
+          "name": "Lat Pull-down",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 160.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 130.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 160.0,
+          "reps": 8
+        },
+        {
+          "name": "Accessory Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 80.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 80.0,
+              "reps": 8
+            }
+          ],
+          "sets": 2,
+          "weight": 80.0,
+          "reps": 10
+        },
+        {
+          "name": "Band Pull-aparts",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 20
+        }
+      ],
+      "notes": "Work gym - Barbell Rows - Preacher EZ Curls - shitty lat pull down machine (forced grip path) - DB Bench felt awesome and OHP felt awesome - was on the heavy side today so not surprising that chin-ups were a bit weak and the weight moving was strong."
     }
   ],
   "measurements": [
