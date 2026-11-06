@@ -1,8 +1,8 @@
 {
   "version": 5,
   "unit": "lb",
-  "wave": 2,
-  "next_day": 3,
+  "wave": 3,
+  "next_day": 1,
   "block": 1,
   "program": [
     {
@@ -156,6 +156,38 @@
           "highlight": false
         },
         {
+          "name": "90/90 Hip Switches",
+          "kind": "reps",
+          "scheme": "2\u00d76\u20138 each way",
+          "block": "core",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Dead Bugs",
+          "kind": "reps",
+          "scheme": "3\u00d76\u20138 each side \u2014 slow",
+          "block": "core",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Pallof Press",
+          "kind": "strength",
+          "scheme": "3\u00d78\u201310 each side",
+          "block": "core",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Kneeling Plate Woodchop",
+          "kind": "strength",
+          "scheme": "3\u00d78 each side \u2014 high to low, stay tall",
+          "block": "core",
+          "focus": false,
+          "highlight": false
+        },
+        {
           "name": "Long Bike Ride",
           "kind": "bike",
           "scheme": "Long ride after core",
@@ -183,7 +215,7 @@
         {
           "name": "Squat Power Waves",
           "kind": "power_wave",
-          "scheme": "2\u00d7 warm-up, 4\u00d7 Power Waves, 1\u00d7 cool-down",
+          "scheme": "3\u00d7 warm-up, 4\u00d7 Power Waves, 1\u00d7 cool-down",
           "block": "strength",
           "focus": false,
           "highlight": true,
@@ -192,7 +224,7 @@
         {
           "name": "Speed Trap Bar",
           "kind": "strength",
-          "scheme": "6\u00d72\u20135",
+          "scheme": "1\u00d7 warm-up, 6\u00d72\u20135",
           "block": "strength",
           "focus": false,
           "highlight": false,
@@ -607,6 +639,38 @@
           "highlight": false
         },
         {
+          "name": "World's Greatest Stretch",
+          "kind": "reps",
+          "scheme": "2\u00d75 each side",
+          "block": "core",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Glute Bridge March",
+          "kind": "reps",
+          "scheme": "2\u00d78 each side",
+          "block": "core",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Bird Dog",
+          "kind": "reps",
+          "scheme": "2\u00d76\u20138 each side \u2014 slow",
+          "block": "core",
+          "focus": false,
+          "highlight": false
+        },
+        {
+          "name": "Plate Around-the-World",
+          "kind": "strength",
+          "scheme": "2\u00d76\u20138 each direction \u2014 plate circles the torso",
+          "block": "core",
+          "focus": false,
+          "highlight": false
+        },
+        {
           "name": "Flush Cardio",
           "kind": "cardio_choice",
           "scheme": "Flush legs with bike or light run",
@@ -623,7 +687,7 @@
     "Overhead Press": 225.0,
     "Plank": 150.0,
     "Squat": 455.0,
-    "Trap-Bar Deadlift": 615.0,
+    "Trap-Bar Deadlift": 613.0,
     "Bench": 315.0,
     "Pull-Ups (reps)": 15.0,
     "Weighted Pull-Ups": 100.0,
@@ -637,16 +701,16 @@
     "Chin-Ups (Max reps)": 14.0,
     "Weighted Chin-Ups": 100.0,
     "Overhead Press": 185.0,
-    "Plank": 110.0,
-    "Squat": 405.0,
-    "Trap-Bar Deadlift": 575.0,
-    "Bench": 275.0,
-    "Pull-Ups (reps)": 10.0,
+    "Plank": 120.0,
+    "Squat": 415.0,
+    "Trap-Bar Deadlift": 573.0,
+    "Bench": 295.0,
+    "Pull-Ups (reps)": 12.0,
     "Weighted Pull-Ups": 70.0,
     "Curls": 135.0,
     "Skull-Crushers": 135.0,
     "Mile Time": 9.15,
-    "Push-Ups (reps)": 35.0,
+    "Push-Ups (reps)": 55.0,
     "Dead Hang": 60.0
   },
   "sessions": [
@@ -2322,6 +2386,5568 @@
         }
       ],
       "notes": "Work gym - Barbell Rows - Preacher EZ Curls - shitty lat pull down machine (forced grip path) - DB Bench felt awesome and OHP felt awesome - was on the heavy side today so not surprising that chin-ups were a bit weak and the weight moving was strong."
+    },
+    {
+      "id": "23c53684-f446-47f3-8ac6-b1a7da2f4e94",
+      "date": "2026-09-17T00:37:26",
+      "cycle_day": 3,
+      "wave": 2,
+      "program_day": 12,
+      "day_name": "Core A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Sit-ups",
+          "kind": "reps",
+          "focus": false,
+          "sets": 4,
+          "reps": 30
+        },
+        {
+          "name": "Plank",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 90.0
+        },
+        {
+          "name": "Russian Twists",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 60,
+          "weight": 10.0
+        },
+        {
+          "name": "Alternating Toe Taps",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 16
+        }
+      ],
+      "notes": "Workout seems short but the core definitely gets worked and you should feel better at the end of this"
+    },
+    {
+      "id": "5454d7aa-c7ef-42f4-a61d-6a5e6632604e",
+      "date": "2026-09-17T00:39:50",
+      "cycle_day": 4,
+      "wave": 2,
+      "program_day": 13,
+      "day_name": "Lower B",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Box Jumps",
+          "kind": "reps",
+          "focus": false,
+          "sets": 3,
+          "reps": 8
+        },
+        {
+          "name": "Squat Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 315.0,
+              "reps": 6
+            },
+            {
+              "n": 2,
+              "weight": 365.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 365.0,
+              "reps": 3
+            },
+            {
+              "n": 4,
+              "weight": 365.0,
+              "reps": 2
+            }
+          ],
+          "cooldown": {
+            "weight": 315.0,
+            "reps": 8
+          },
+          "weight": 365.0,
+          "reps": 3
+        },
+        {
+          "name": "Speed Trap Bar",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 253.0,
+              "reps": 6
+            },
+            {
+              "n": 2,
+              "weight": 303.0,
+              "reps": 6
+            },
+            {
+              "n": 3,
+              "weight": 303.0,
+              "reps": 6
+            },
+            {
+              "n": 4,
+              "weight": 303.0,
+              "reps": 6
+            },
+            {
+              "n": 5,
+              "weight": 303.0,
+              "reps": 6
+            },
+            {
+              "n": 6,
+              "weight": 303.0,
+              "reps": 6
+            }
+          ],
+          "sets": 6,
+          "weight": 303.0,
+          "reps": 6
+        },
+        {
+          "name": "Light Lunge",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 135.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 135.0,
+          "reps": 10
+        },
+        {
+          "name": "Calf Raises",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 135.0,
+              "reps": 15
+            },
+            {
+              "n": 3,
+              "weight": 135.0,
+              "reps": 15
+            }
+          ],
+          "sets": 3,
+          "weight": 135.0,
+          "reps": 15
+        },
+        {
+          "name": "Leg Extensions",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 270.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 270.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 270.0,
+          "reps": 15
+        }
+      ],
+      "notes": "Tough leg day. Worked hard. Squats were full depth every time. Lunges - bulgarian barbell. Done at work gym - maxed out leg extension I'm not confident on the number - played softball that night and felt alright moving around - very sore the next day"
+    },
+    {
+      "id": "207e787a-5d4e-4d0c-add6-fcfbc49c2494",
+      "date": "2026-09-18T10:23:30",
+      "cycle_day": 5,
+      "wave": 2,
+      "program_day": 14,
+      "day_name": "Upper A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Bench Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 225.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 245.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 245.0,
+              "reps": 3
+            },
+            {
+              "n": 4,
+              "weight": 245.0,
+              "reps": 3
+            }
+          ],
+          "cooldown": {
+            "weight": 185.0,
+            "reps": 12
+          },
+          "weight": 225.0,
+          "reps": 8
+        },
+        {
+          "name": "Weighted Pull-Ups",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 45.0,
+              "reps": 4
+            },
+            {
+              "n": 2,
+              "weight": 55.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 45.0,
+              "reps": 3
+            },
+            {
+              "n": 4,
+              "weight": 45.0,
+              "reps": 4
+            }
+          ],
+          "max_reps": 10,
+          "weight": 55.0,
+          "reps": 3
+        },
+        {
+          "name": "Incline DB Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 75.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 75.0,
+          "reps": 10
+        },
+        {
+          "name": "Bird Dog Rows",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 75.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 75.0,
+          "reps": 10
+        },
+        {
+          "name": "Chest Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 145.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 145.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 145.0,
+          "reps": 12
+        },
+        {
+          "name": "DB Shoulder Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 50.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 50.0,
+              "reps": 6
+            }
+          ],
+          "sets": 2,
+          "weight": 50.0,
+          "reps": 10
+        },
+        {
+          "name": "Band Pull-aparts",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 20
+        },
+        {
+          "name": "Overhead Tricep Extension",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 30.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 30.0,
+              "reps": 15
+            }
+          ],
+          "sets": 2,
+          "weight": 30.0,
+          "reps": 15
+        },
+        {
+          "name": "Accessory Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 60.0,
+              "reps": 20
+            },
+            {
+              "n": 2,
+              "weight": 60.0,
+              "reps": 20
+            }
+          ],
+          "sets": 2,
+          "weight": 60.0,
+          "reps": 20
+        },
+        {
+          "name": "Pec Deck",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 200.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 260.0,
+              "reps": 5
+            }
+          ],
+          "sets": 2,
+          "weight": 260.0,
+          "reps": 5
+        }
+      ],
+      "notes": "Had to rush a bit to make it home on time - could probably do a bit more weight after the power waevs with a bit more rest"
+    },
+    {
+      "id": "bfb21c1c-7e24-49f5-a29b-80679dd27020",
+      "date": "2026-09-18T10:23:45",
+      "cycle_day": 6,
+      "wave": 2,
+      "program_day": 15,
+      "day_name": "Tempo Run",
+      "mesocycle_completed": false,
+      "lifts": [],
+      "notes": "Skipped"
+    },
+    {
+      "id": "036b9e4b-c6e9-4cba-b736-ee9816367fcc",
+      "date": "2026-09-18T16:31:40",
+      "cycle_day": 7,
+      "wave": 2,
+      "program_day": 16,
+      "day_name": "Lower A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Trap-Bar Deadlift Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 500.0,
+              "reps": 3
+            },
+            {
+              "n": 2,
+              "weight": 500.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 500.0,
+              "reps": 2
+            },
+            {
+              "n": 4,
+              "weight": 410.0,
+              "reps": 8
+            }
+          ],
+          "cooldown": {
+            "weight": 320.0,
+            "reps": 15
+          },
+          "weight": 500.0,
+          "reps": 3
+        },
+        {
+          "name": "Speed Squats",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 2,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 3,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 4,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 5,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 6,
+              "weight": 225.0,
+              "reps": 5
+            }
+          ],
+          "sets": 6,
+          "weight": 225.0,
+          "reps": 5
+        },
+        {
+          "name": "Bulgarian Lunges",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 146.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 146.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 146.0,
+          "reps": 10
+        },
+        {
+          "name": "Side Lunge Squats (barbell)",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 55.0,
+              "reps": 10
+            }
+          ],
+          "sets": 1,
+          "weight": 55.0,
+          "reps": 10
+        },
+        {
+          "name": "Hamstring Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 180.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 180.0,
+              "reps": 15
+            }
+          ],
+          "sets": 2,
+          "weight": 180.0,
+          "reps": 15
+        },
+        {
+          "name": "Leg Extensions",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 270.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 300.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 300.0,
+          "reps": 12
+        },
+        {
+          "name": "Wall Squat",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 90.0
+        }
+      ],
+      "notes": "Leg strength is definitely coming back pretty quickly - that MU trap bar is ass but the squat and bulgarians feel strong and so do the curls"
+    },
+    {
+      "id": "4bbb84fa-7b0c-42aa-8b9f-c83e6e6c9a74",
+      "date": "2026-09-21T08:13:28",
+      "cycle_day": 8,
+      "wave": 2,
+      "program_day": 17,
+      "day_name": "Arms",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Push-ups",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 40
+        },
+        {
+          "name": "Curls",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 110.0,
+              "reps": 4
+            },
+            {
+              "n": 2,
+              "weight": 120.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 120.0,
+              "reps": 3
+            }
+          ],
+          "weight": 120.0,
+          "reps": 3
+        },
+        {
+          "name": "Skull-crushers",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 110.0,
+              "reps": 4
+            },
+            {
+              "n": 2,
+              "weight": 120.0,
+              "reps": 4
+            },
+            {
+              "n": 3,
+              "weight": 120.0,
+              "reps": 3
+            }
+          ],
+          "weight": 120.0,
+          "reps": 4
+        },
+        {
+          "name": "Lateral Raises",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 40.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 40.0,
+              "reps": 12
+            },
+            {
+              "n": 3,
+              "weight": 40.0,
+              "reps": 12
+            }
+          ],
+          "sets": 3,
+          "weight": 40.0,
+          "reps": 12
+        },
+        {
+          "name": "Inside Hammer Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 35.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 35.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 35.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 35.0,
+          "reps": 10
+        },
+        {
+          "name": "Overhead Tricep Extension",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 35.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 35.0,
+              "reps": 12
+            },
+            {
+              "n": 3,
+              "weight": 35.0,
+              "reps": 12
+            }
+          ],
+          "sets": 3,
+          "weight": 35.0,
+          "reps": 12
+        },
+        {
+          "name": "DB Shoulder Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 50.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 50.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 50.0,
+              "reps": 9
+            }
+          ],
+          "sets": 3,
+          "weight": 50.0,
+          "reps": 10
+        },
+        {
+          "name": "Tricep Pushdown (cable)",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 67.5,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 82.5,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 82.5,
+              "reps": 8
+            }
+          ],
+          "sets": 3,
+          "weight": 82.5,
+          "reps": 10
+        },
+        {
+          "name": "Chin-Ups (Max reps)",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 10
+        }
+      ],
+      "notes": "Pec Deck was taken the whole time - I skipped a little more than I meant to here... Arms and shoulders were very tight and sore - good workout. 60s were tough to curl."
+    },
+    {
+      "id": "8b37b417-52b2-4871-a3f5-519b481a81d6",
+      "date": "2026-09-21T23:51:27",
+      "cycle_day": 9,
+      "wave": 2,
+      "program_day": 18,
+      "day_name": "Core B",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Sit-ups",
+          "kind": "reps",
+          "focus": false,
+          "sets": 4,
+          "reps": 30
+        },
+        {
+          "name": "Supermans",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 60.0
+        },
+        {
+          "name": "Flush Cardio",
+          "kind": "cardio_choice",
+          "focus": false,
+          "mode": "Bike",
+          "minutes": 40.0,
+          "distance": 17.0
+        }
+      ],
+      "notes": "Bike HR consistently at 140+ - hard work @ 13500 meter / half hour clip. \nGroin still too tight for bosu ball work - can feel the pull on sit-ups even so kept it easy for run + softball tomorrow. \nGood day for the sauna. Ramp up nutrition for Wave 3"
+    },
+    {
+      "id": "16336d5a-d348-446d-b686-0192e1e2c4a1",
+      "date": "2026-09-23T21:33:27",
+      "cycle_day": 1,
+      "wave": 3,
+      "program_day": 19,
+      "day_name": "Marathon Builder",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Marathon Builder",
+          "kind": "run",
+          "focus": false,
+          "distance": 1.0,
+          "pace": 10.083333333333334
+        }
+      ],
+      "notes": "Got 21.7k steps and played softball as well. No breaks on the mile!"
+    },
+    {
+      "id": "b57ede8f-efa1-4539-8a76-a56e9867875a",
+      "date": "2026-09-24T00:17:43",
+      "cycle_day": 2,
+      "wave": 3,
+      "program_day": 20,
+      "day_name": "Upper B",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Weighted Chin-Ups",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 45.0,
+              "reps": 5
+            },
+            {
+              "n": 2,
+              "weight": 90.0,
+              "reps": 2
+            },
+            {
+              "n": 3,
+              "weight": 90.0,
+              "reps": 2
+            },
+            {
+              "n": 4,
+              "weight": 90.0,
+              "reps": 2
+            }
+          ],
+          "max_reps": 10,
+          "weight": 90.0,
+          "reps": 2
+        },
+        {
+          "name": "Overhead Press",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 185.0,
+              "reps": 2
+            },
+            {
+              "n": 3,
+              "weight": 185.0
+            },
+            {
+              "n": 4,
+              "weight": 135.0,
+              "reps": 8
+            }
+          ],
+          "weight": 185.0,
+          "reps": 2
+        },
+        {
+          "name": "Chest-Supported DB Row",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 80.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 80.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 80.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 80.0,
+          "reps": 10
+        },
+        {
+          "name": "DB Bench",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 100.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 80.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 80.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 100.0,
+          "reps": 8
+        },
+        {
+          "name": "Row Machine",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 90.0,
+              "reps": 20
+            },
+            {
+              "n": 2,
+              "weight": 180.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 180.0,
+          "reps": 10
+        },
+        {
+          "name": "Lat Pull-down",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 90.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 180.0,
+              "reps": 15
+            }
+          ],
+          "sets": 2,
+          "weight": 180.0,
+          "reps": 15
+        },
+        {
+          "name": "Accessory Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 60.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 60.0,
+              "reps": 15
+            }
+          ],
+          "sets": 2,
+          "weight": 60.0,
+          "reps": 15
+        },
+        {
+          "name": "Band Pull-aparts",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 20
+        }
+      ],
+      "notes": "Hit chin on third set of Overhead Press. Bit heavy. Light sleep and not a lot of protein last few days. Used plate loaded machines for rows and lat pulls at MU and thick bar for chin-ups. Arms very sore. New bike still not in."
+    },
+    {
+      "id": "e1d2a5db-abea-48e4-90bc-a870100c533b",
+      "date": "2026-09-25T12:29:26",
+      "cycle_day": 3,
+      "wave": 3,
+      "program_day": 21,
+      "day_name": "Core A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Sit-ups",
+          "kind": "reps",
+          "focus": false,
+          "sets": 4,
+          "reps": 30
+        },
+        {
+          "name": "Plank",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 90.0
+        },
+        {
+          "name": "Russian Twists",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 60,
+          "weight": 10.0
+        },
+        {
+          "name": "Alternating Toe Taps",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 16
+        }
+      ],
+      "notes": "Pre-emptively filling out to view Wave 3 of squat day - going to do both of these today"
+    },
+    {
+      "id": "1ce23cf1-90c1-4829-ad56-49bae7ee0f00",
+      "date": "2026-09-25T15:17:26",
+      "cycle_day": 4,
+      "wave": 3,
+      "program_day": 22,
+      "day_name": "Lower B",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Box Jumps",
+          "kind": "reps",
+          "focus": false,
+          "sets": 3,
+          "reps": 8
+        },
+        {
+          "name": "Squat Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 315.0,
+              "reps": 5
+            },
+            {
+              "n": 2,
+              "weight": 365.0,
+              "reps": 2
+            },
+            {
+              "n": 3,
+              "weight": 365.0,
+              "reps": 2
+            },
+            {
+              "n": 4,
+              "weight": 365.0,
+              "reps": 2
+            }
+          ],
+          "warmup_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 225.0,
+              "reps": 8
+            }
+          ],
+          "cooldown": {
+            "weight": 315.0,
+            "reps": 8
+          },
+          "weight": 365.0,
+          "reps": 2
+        },
+        {
+          "name": "Speed Trap Bar",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 285.0,
+              "reps": 6
+            },
+            {
+              "n": 2,
+              "weight": 285.0,
+              "reps": 6
+            },
+            {
+              "n": 3,
+              "weight": 285.0,
+              "reps": 6
+            },
+            {
+              "n": 4,
+              "weight": 285.0,
+              "reps": 6
+            },
+            {
+              "n": 5,
+              "weight": 285.0,
+              "reps": 6
+            },
+            {
+              "n": 6,
+              "weight": 285.0,
+              "reps": 12
+            }
+          ],
+          "warmup": {
+            "weight": 235.0,
+            "reps": 10
+          },
+          "sets": 6,
+          "weight": 285.0,
+          "reps": 12
+        },
+        {
+          "name": "Light Lunge",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 135.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 135.0,
+          "reps": 10
+        },
+        {
+          "name": "Calf Raises",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 135.0,
+              "reps": 15
+            },
+            {
+              "n": 3,
+              "weight": 135.0,
+              "reps": 15
+            }
+          ],
+          "sets": 3,
+          "weight": 135.0,
+          "reps": 15
+        },
+        {
+          "name": "Leg Extensions",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 300.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 300.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 300.0,
+          "reps": 12
+        }
+      ],
+      "notes": "Doing core day and squat day in one - so no run but long bike!"
+    },
+    {
+      "id": "6b514667-a71c-487e-9620-ed6648072d1d",
+      "date": "2026-10-02T11:26:16",
+      "cycle_day": 5,
+      "wave": 3,
+      "program_day": 23,
+      "day_name": "Upper A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Bench Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "reps": 4
+            },
+            {
+              "n": 2,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "reps": 3
+            },
+            {
+              "n": 4,
+              "reps": 2
+            }
+          ],
+          "warmup_sets": [
+            {
+              "n": 1,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "reps": 8
+            }
+          ],
+          "cooldown": {
+            "reps": 10
+          }
+        },
+        {
+          "name": "Weighted Pull-Ups",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 45.0,
+              "reps": 5
+            },
+            {
+              "n": 2,
+              "weight": 55.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 55.0,
+              "reps": 3
+            },
+            {
+              "n": 4,
+              "weight": 55.0,
+              "reps": 2
+            }
+          ],
+          "warmup": {
+            "reps": 5
+          },
+          "max_reps": 8,
+          "weight": 55.0,
+          "reps": 3
+        },
+        {
+          "name": "Incline DB Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 75.0,
+              "reps": 6
+            },
+            {
+              "n": 2,
+              "weight": 75.0,
+              "reps": 8
+            },
+            {
+              "n": 3,
+              "weight": 75.0,
+              "reps": 7
+            }
+          ],
+          "sets": 3,
+          "weight": 75.0,
+          "reps": 8
+        },
+        {
+          "name": "Bird Dog Rows",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 75.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 75.0,
+          "reps": 10
+        },
+        {
+          "name": "Chest Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 180.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 90.0,
+              "reps": 20
+            }
+          ],
+          "sets": 2,
+          "weight": 180.0,
+          "reps": 10
+        },
+        {
+          "name": "DB Shoulder Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 50.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 50.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 50.0,
+          "reps": 10
+        },
+        {
+          "name": "Band Pull-aparts",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 20
+        },
+        {
+          "name": "Overhead Tricep Extension",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 35.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 35.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 35.0,
+          "reps": 12
+        },
+        {
+          "name": "Accessory Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 60.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 60.0,
+              "reps": 15
+            }
+          ],
+          "sets": 2,
+          "weight": 60.0,
+          "reps": 15
+        },
+        {
+          "name": "Pec Deck",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 200.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 200.0,
+              "reps": 8
+            }
+          ],
+          "sets": 2,
+          "weight": 200.0,
+          "reps": 8
+        }
+      ],
+      "notes": "No bench available - used DBs"
+    },
+    {
+      "id": "8be3a78e-05dd-4c58-90c6-3bf85a6fb3bd",
+      "date": "2026-10-02T11:26:44",
+      "cycle_day": 6,
+      "wave": 3,
+      "program_day": 24,
+      "day_name": "Tempo Run",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Tempo Run",
+          "kind": "run",
+          "focus": false,
+          "distance": 1.0,
+          "pace": 10.0
+        }
+      ],
+      "notes": "On treadmill"
+    },
+    {
+      "id": "f3dddfcd-82cf-4181-9791-ee1efbe54a45",
+      "date": "2026-10-02T11:28:51",
+      "cycle_day": 7,
+      "wave": 3,
+      "program_day": 25,
+      "day_name": "Lower A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Trap-Bar Deadlift Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 523.0,
+              "reps": 2
+            },
+            {
+              "n": 2,
+              "weight": 523.0,
+              "reps": 2
+            },
+            {
+              "n": 3,
+              "weight": 523.0
+            },
+            {
+              "n": 4,
+              "weight": 473.0,
+              "reps": 2
+            }
+          ],
+          "warmup_sets": [
+            {
+              "n": 1,
+              "weight": 253.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 343.0,
+              "reps": 8
+            },
+            {
+              "n": 3,
+              "weight": 433.0,
+              "reps": 5
+            }
+          ],
+          "cooldown": {
+            "weight": 253.0,
+            "reps": 15
+          },
+          "weight": 523.0,
+          "reps": 2
+        },
+        {
+          "name": "Speed Squats",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 2,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 3,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 4,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 5,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 6,
+              "weight": 225.0,
+              "reps": 5
+            }
+          ],
+          "sets": 6,
+          "weight": 225.0,
+          "reps": 5
+        },
+        {
+          "name": "Bulgarian Lunges",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 135.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 135.0,
+          "reps": 10
+        },
+        {
+          "name": "Hamstring Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 130.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 160.0,
+              "reps": 15
+            }
+          ],
+          "sets": 2,
+          "weight": 160.0,
+          "reps": 15
+        },
+        {
+          "name": "Leg Extensions",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 300.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 300.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 300.0,
+          "reps": 12
+        },
+        {
+          "name": "Wall Squat",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 90.0
+        }
+      ],
+      "notes": "SoHamstring curl machine at work gym is heavier than at MU"
+    },
+    {
+      "id": "74b7f79f-4c83-4940-a179-3e7ae6d55a21",
+      "date": "2026-10-02T11:31:14",
+      "cycle_day": 8,
+      "wave": 3,
+      "program_day": 26,
+      "day_name": "Arms",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Push-ups",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 50
+        },
+        {
+          "name": "Pec Deck",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 200.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 200.0,
+              "reps": 8
+            }
+          ],
+          "sets": 2,
+          "weight": 200.0,
+          "reps": 8
+        },
+        {
+          "name": "Curls",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 105.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 125.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 135.0,
+              "reps": 1
+            }
+          ],
+          "warmup": {
+            "weight": 65.0,
+            "reps": 12
+          },
+          "weight": 125.0,
+          "reps": 3
+        },
+        {
+          "name": "Skull-crushers",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 105.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 125.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 135.0,
+              "reps": 3
+            }
+          ],
+          "warmup": {
+            "weight": 65.0,
+            "reps": 12
+          },
+          "weight": 135.0,
+          "reps": 3
+        },
+        {
+          "name": "Lateral Raises",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 40.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 60.0,
+              "reps": 8
+            },
+            {
+              "n": 3,
+              "weight": 40.0,
+              "reps": 15
+            }
+          ],
+          "sets": 3,
+          "weight": 60.0,
+          "reps": 8
+        },
+        {
+          "name": "Inside Hammer Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 40.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 40.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 40.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 40.0,
+          "reps": 10
+        },
+        {
+          "name": "Overhead Tricep Extension",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 40.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 40.0,
+              "reps": 12
+            },
+            {
+              "n": 3,
+              "weight": 40.0,
+              "reps": 12
+            }
+          ],
+          "sets": 3,
+          "weight": 40.0,
+          "reps": 12
+        },
+        {
+          "name": "DB Shoulder Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 60.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 60.0,
+              "reps": 8
+            },
+            {
+              "n": 3,
+              "weight": 60.0,
+              "reps": 8
+            }
+          ],
+          "sets": 3,
+          "weight": 60.0,
+          "reps": 10
+        },
+        {
+          "name": "Tricep Pushdown (cable)",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 67.5,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 82.5,
+              "reps": 12
+            },
+            {
+              "n": 3,
+              "weight": 82.5,
+              "reps": 12
+            }
+          ],
+          "sets": 3,
+          "weight": 82.5,
+          "reps": 12
+        },
+        {
+          "name": "Chin-Ups (Max reps)",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 8
+        },
+        {
+          "name": "Dips (max)",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 10
+        }
+      ],
+      "notes": "Softball afterwards"
+    },
+    {
+      "id": "dfcfb604-2b7e-4c25-b027-66551ae565d9",
+      "date": "2026-10-02T11:31:42",
+      "cycle_day": 9,
+      "wave": 3,
+      "program_day": 27,
+      "day_name": "Core B",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Sit-ups",
+          "kind": "reps",
+          "focus": false,
+          "sets": 4,
+          "reps": 30
+        },
+        {
+          "name": "Supermans",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 60.0
+        },
+        {
+          "name": "Single-Leg Deadlift (BOSU)",
+          "kind": "reps",
+          "focus": false,
+          "sets": 1,
+          "reps": 25
+        },
+        {
+          "name": "Flush Cardio",
+          "kind": "cardio_choice",
+          "focus": false,
+          "mode": "Bike",
+          "minutes": 0.0,
+          "distance": 0.0
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "23023c04-21fa-4314-b1a7-2d57d7050ffd",
+      "date": "2026-10-02T11:31:59",
+      "cycle_day": 1,
+      "wave": 4,
+      "program_day": 28,
+      "day_name": "Marathon Builder",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Marathon Builder",
+          "kind": "run",
+          "focus": false,
+          "distance": 0.0,
+          "pace": 0.0
+        }
+      ],
+      "notes": "No run - softball and 21k steps"
+    },
+    {
+      "id": "7810c30f-8cde-47b7-bb75-df649ecb28f8",
+      "date": "2026-10-02T20:35:42",
+      "cycle_day": 2,
+      "wave": 4,
+      "program_day": 29,
+      "day_name": "Upper B",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Weighted Chin-Ups",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 45.0,
+              "reps": 5
+            },
+            {
+              "n": 2,
+              "weight": 90.0,
+              "reps": 2
+            },
+            {
+              "n": 3,
+              "weight": 100.0,
+              "reps": 1
+            },
+            {
+              "n": 4,
+              "weight": 45.0,
+              "reps": 7
+            }
+          ],
+          "warmup": {
+            "weight": 0.0,
+            "reps": 8
+          },
+          "max_reps": 12,
+          "weight": 100.0,
+          "reps": 1
+        },
+        {
+          "name": "Overhead Press",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 4
+            },
+            {
+              "n": 2,
+              "weight": 155.0,
+              "reps": 4
+            },
+            {
+              "n": 3,
+              "weight": 185.0,
+              "reps": 1
+            },
+            {
+              "n": 4,
+              "weight": 135.0,
+              "reps": 10
+            }
+          ],
+          "warmup": {
+            "weight": 95.0,
+            "reps": 10
+          },
+          "weight": 185.0,
+          "reps": 1
+        },
+        {
+          "name": "Chest-Supported DB Row",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 80.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 80.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 80.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 80.0,
+          "reps": 10
+        },
+        {
+          "name": "DB Bench",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 80.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 100.0,
+              "reps": 8
+            },
+            {
+              "n": 3,
+              "weight": 100.0,
+              "reps": 7
+            }
+          ],
+          "sets": 3,
+          "weight": 100.0,
+          "reps": 8
+        },
+        {
+          "name": "Row Machine",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 90.0,
+              "reps": 20
+            },
+            {
+              "n": 2,
+              "weight": 180.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 180.0,
+          "reps": 10
+        },
+        {
+          "name": "Lat Pull-down",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 90.0,
+              "reps": 20
+            },
+            {
+              "n": 2,
+              "weight": 180.0,
+              "reps": 15
+            }
+          ],
+          "sets": 2,
+          "weight": 180.0,
+          "reps": 15
+        },
+        {
+          "name": "Accessory Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 80.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 80.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 80.0,
+          "reps": 12
+        },
+        {
+          "name": "Band Pull-aparts",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 20
+        },
+        {
+          "name": "Recovery Bike",
+          "kind": "bike",
+          "focus": false,
+          "minutes": 73.0
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "c67f4caf-a758-4ebc-8fa1-92184263d73e",
+      "date": "2026-10-05T21:22:38",
+      "cycle_day": 3,
+      "wave": 4,
+      "program_day": 30,
+      "day_name": "Core A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Sit-ups",
+          "kind": "reps",
+          "focus": false,
+          "sets": 4,
+          "reps": 30
+        },
+        {
+          "name": "Plank",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 90.0
+        },
+        {
+          "name": "Russian Twists",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 60,
+          "weight": 10.0
+        },
+        {
+          "name": "Alternating Toe Taps",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 16
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "27e6ecc2-1af9-4e16-94d8-029cfbfcde4d",
+      "date": "2026-10-05T23:22:16",
+      "cycle_day": 4,
+      "wave": 4,
+      "program_day": 31,
+      "day_name": "Lower B",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Box Jumps",
+          "kind": "reps",
+          "focus": false,
+          "sets": 3,
+          "reps": 8
+        },
+        {
+          "name": "Squat Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 375.0,
+              "reps": 2
+            },
+            {
+              "n": 2,
+              "weight": 415.0,
+              "reps": 1
+            },
+            {
+              "n": 3,
+              "weight": 325.0,
+              "reps": 8
+            },
+            {
+              "n": 4,
+              "weight": 225.0,
+              "reps": 15
+            }
+          ],
+          "warmup_sets": [
+            {
+              "n": 1,
+              "weight": 235.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 325.0,
+              "reps": 4
+            }
+          ],
+          "weight": 415.0,
+          "reps": 1
+        },
+        {
+          "name": "Speed Trap Bar",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 290.0,
+              "reps": 6
+            },
+            {
+              "n": 2,
+              "weight": 290.0,
+              "reps": 6
+            },
+            {
+              "n": 3,
+              "weight": 290.0,
+              "reps": 6
+            },
+            {
+              "n": 4,
+              "weight": 290.0,
+              "reps": 6
+            },
+            {
+              "n": 5,
+              "weight": 290.0,
+              "reps": 6
+            },
+            {
+              "n": 6,
+              "weight": 290.0,
+              "reps": 6
+            }
+          ],
+          "warmup": {
+            "weight": 235.0,
+            "reps": 6
+          },
+          "sets": 6,
+          "weight": 290.0,
+          "reps": 6
+        },
+        {
+          "name": "Light Lunge",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 135.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 135.0,
+          "reps": 10
+        },
+        {
+          "name": "Calf Raises",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 135.0,
+              "reps": 15
+            },
+            {
+              "n": 3,
+              "weight": 135.0,
+              "reps": 15
+            }
+          ],
+          "sets": 3,
+          "weight": 135.0,
+          "reps": 15
+        },
+        {
+          "name": "Leg Extensions",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 300.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 300.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 300.0,
+          "reps": 12
+        }
+      ],
+      "notes": "Great Squats! Starting squat day at 2 plates instead of 1 makes the barbell on the back feel lighter - even if it's just a placebo effect!"
+    },
+    {
+      "id": "6d81eeae-75db-4c4a-9a1a-68bc980c50c0",
+      "date": "2026-10-16T11:38:48",
+      "cycle_day": 5,
+      "wave": 4,
+      "program_day": 32,
+      "day_name": "Upper A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Bench Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 275.0,
+              "reps": 3
+            },
+            {
+              "n": 2,
+              "weight": 295.0,
+              "reps": 1
+            },
+            {
+              "n": 3,
+              "weight": 275.0,
+              "reps": 2
+            },
+            {
+              "n": 4,
+              "weight": 225.0,
+              "reps": 7
+            }
+          ],
+          "warmup_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 225.0,
+              "reps": 6
+            }
+          ],
+          "cooldown": {
+            "weight": 135.0,
+            "reps": 15
+          },
+          "weight": 275.0,
+          "reps": 3
+        },
+        {
+          "name": "Weighted Pull-Ups",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 45.0,
+              "reps": 3
+            },
+            {
+              "n": 2,
+              "weight": 70.0,
+              "reps": 1
+            },
+            {
+              "n": 3,
+              "weight": 80.0
+            },
+            {
+              "n": 4,
+              "weight": 45.0,
+              "reps": 5
+            }
+          ],
+          "warmup": {
+            "weight": 0.0,
+            "reps": 8
+          },
+          "max_reps": 11,
+          "weight": 80.0
+        },
+        {
+          "name": "Incline DB Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 75.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 75.0,
+              "reps": 8
+            },
+            {
+              "n": 3,
+              "weight": 75.0,
+              "reps": 8
+            }
+          ],
+          "sets": 3,
+          "weight": 75.0,
+          "reps": 8
+        },
+        {
+          "name": "Bird Dog Rows",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 75.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 75.0,
+          "reps": 10
+        },
+        {
+          "name": "Chest Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 180.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 90.0,
+              "reps": 20
+            }
+          ],
+          "sets": 2,
+          "weight": 180.0,
+          "reps": 10
+        },
+        {
+          "name": "DB Shoulder Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 60.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 60.0,
+              "reps": 8
+            }
+          ],
+          "sets": 2,
+          "weight": 60.0,
+          "reps": 10
+        },
+        {
+          "name": "Band Pull-aparts",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 20
+        },
+        {
+          "name": "Overhead Tricep Extension",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 40.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 40.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 40.0,
+          "reps": 12
+        },
+        {
+          "name": "Accessory Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 80.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 80.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 80.0,
+          "reps": 12
+        },
+        {
+          "name": "Pec Deck",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 200.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 200.0,
+              "reps": 8
+            }
+          ],
+          "sets": 2,
+          "weight": 200.0,
+          "reps": 8
+        }
+      ],
+      "notes": "Accessories might be a bit inaccurate - max 295 for sure."
+    },
+    {
+      "id": "77c77730-fdc2-459c-b295-0efb92bcf7e4",
+      "date": "2026-10-16T11:39:27",
+      "cycle_day": 6,
+      "wave": 4,
+      "program_day": 33,
+      "day_name": "Tempo Run",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Tempo Run",
+          "kind": "run",
+          "focus": false,
+          "distance": 0.0,
+          "pace": 10.0
+        }
+      ],
+      "notes": "Lots of steps"
+    },
+    {
+      "id": "999c95c3-e55c-4e9d-9bc4-6cdc49683b6d",
+      "date": "2026-10-16T11:40:27",
+      "cycle_day": 7,
+      "wave": 4,
+      "program_day": 34,
+      "day_name": "Lower A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Trap-Bar Deadlift Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 523.0,
+              "reps": 1
+            },
+            {
+              "n": 2,
+              "weight": 573.0,
+              "reps": 1
+            },
+            {
+              "n": 3,
+              "weight": 613.0
+            },
+            {
+              "n": 4,
+              "weight": 613.0
+            }
+          ],
+          "warmup_sets": [
+            {
+              "n": 1,
+              "weight": 253.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 343.0,
+              "reps": 5
+            },
+            {
+              "n": 3,
+              "weight": 433.0,
+              "reps": 4
+            }
+          ],
+          "cooldown": {
+            "weight": 613.0
+          },
+          "weight": 613.0
+        },
+        {
+          "name": "Speed Squats",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 2,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 3,
+              "weight": 275.0,
+              "reps": 5
+            },
+            {
+              "n": 4,
+              "weight": 275.0,
+              "reps": 5
+            },
+            {
+              "n": 5,
+              "weight": 275.0,
+              "reps": 5
+            },
+            {
+              "n": 6,
+              "weight": 275.0,
+              "reps": 5
+            }
+          ],
+          "sets": 6,
+          "weight": 275.0,
+          "reps": 5
+        },
+        {
+          "name": "Bulgarian Lunges",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 135.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 135.0,
+          "reps": 10
+        },
+        {
+          "name": "Side Lunge Squats (barbell)",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 55.0,
+              "reps": 10
+            }
+          ],
+          "sets": 1,
+          "weight": 55.0,
+          "reps": 10
+        },
+        {
+          "name": "Hamstring Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 130.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 160.0,
+              "reps": 15
+            }
+          ],
+          "sets": 2,
+          "weight": 160.0,
+          "reps": 15
+        },
+        {
+          "name": "Leg Extensions",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 300.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 300.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 300.0,
+          "reps": 12
+        },
+        {
+          "name": "Wall Squat",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 90.0
+        }
+      ],
+      "notes": "Almost got the 613"
+    },
+    {
+      "id": "1691b7df-dbf0-4b8b-a371-2746749c4ec4",
+      "date": "2026-10-16T11:41:17",
+      "cycle_day": 8,
+      "wave": 4,
+      "program_day": 35,
+      "day_name": "Arms",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Push-ups",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 50
+        },
+        {
+          "name": "Pec Deck",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 200.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 200.0,
+              "reps": 8
+            }
+          ],
+          "sets": 2,
+          "weight": 200.0,
+          "reps": 8
+        },
+        {
+          "name": "Curls",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 135.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 135.0,
+              "reps": 1
+            }
+          ],
+          "warmup": {
+            "weight": 65.0,
+            "reps": 12
+          },
+          "weight": 135.0,
+          "reps": 8
+        },
+        {
+          "name": "Skull-crushers",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 135.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 135.0,
+              "reps": 3
+            }
+          ],
+          "warmup": {
+            "weight": 65.0,
+            "reps": 12
+          },
+          "weight": 135.0,
+          "reps": 8
+        },
+        {
+          "name": "Lateral Raises",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 40.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 60.0,
+              "reps": 8
+            },
+            {
+              "n": 3,
+              "weight": 40.0,
+              "reps": 15
+            }
+          ],
+          "sets": 3,
+          "weight": 60.0,
+          "reps": 8
+        },
+        {
+          "name": "Inside Hammer Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 40.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 40.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 40.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 40.0,
+          "reps": 10
+        },
+        {
+          "name": "Overhead Tricep Extension",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 40.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 40.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 40.0,
+          "reps": 12
+        },
+        {
+          "name": "DB Shoulder Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 60.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 60.0,
+              "reps": 8
+            }
+          ],
+          "sets": 2,
+          "weight": 60.0,
+          "reps": 10
+        },
+        {
+          "name": "Tricep Pushdown (cable)",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 67.5,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 82.5,
+              "reps": 12
+            },
+            {
+              "n": 3,
+              "weight": 82.5,
+              "reps": 12
+            }
+          ],
+          "sets": 3,
+          "weight": 82.5,
+          "reps": 12
+        },
+        {
+          "name": "Chin-Ups (Max reps)",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 8
+        },
+        {
+          "name": "Dips (max)",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 10
+        },
+        {
+          "name": "1 Mile",
+          "kind": "run",
+          "focus": false,
+          "distance": 1.0,
+          "pace": 10.5
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "b8a98aa9-97e2-4905-a7ef-56e9992dfbdb",
+      "date": "2026-10-16T12:34:25",
+      "cycle_day": 1,
+      "wave": 1,
+      "program_day": 1,
+      "day_name": "Marathon Builder",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Marathon Builder",
+          "kind": "run",
+          "focus": false,
+          "notes": "27k steps and softball - legs were tight and didn't want to be sore"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "fbaee049-eb4a-483b-abb4-08c8a27c38b5",
+      "date": "2026-10-16T12:37:56",
+      "cycle_day": 2,
+      "wave": 1,
+      "program_day": 2,
+      "day_name": "Upper B",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Weighted Chin-Ups",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 45.0,
+              "reps": 6
+            },
+            {
+              "n": 2,
+              "weight": 70.0,
+              "reps": 4
+            },
+            {
+              "n": 3,
+              "weight": 70.0,
+              "reps": 4
+            },
+            {
+              "n": 4,
+              "weight": 70.0,
+              "reps": 3
+            }
+          ],
+          "warmup": {
+            "weight": 0.0,
+            "reps": 10
+          },
+          "max_reps": 13,
+          "weight": 70.0,
+          "reps": 4,
+          "notes": "Heavy going into it - the pulls feel strong but the bar grip wasn't great so the last reps were fighting to hold the bar instead of real muscle failure"
+        },
+        {
+          "name": "Overhead Press",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 155.0,
+              "reps": 4
+            },
+            {
+              "n": 2,
+              "weight": 155.0,
+              "reps": 4
+            },
+            {
+              "n": 3,
+              "weight": 155.0,
+              "reps": 4
+            },
+            {
+              "n": 4,
+              "weight": 155.0,
+              "reps": 4
+            }
+          ],
+          "warmup": {
+            "weight": 135.0,
+            "reps": 6
+          },
+          "weight": 155.0,
+          "reps": 4,
+          "notes": "This weight feels pretty easy and comfortable - shoulders sore afterwards though"
+        },
+        {
+          "name": "Chest-Supported DB Row",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 85.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 85.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 85.0,
+              "reps": 10
+            }
+          ],
+          "warmup": {
+            "weight": 50.0,
+            "reps": 10
+          },
+          "sets": 3,
+          "weight": 85.0,
+          "reps": 10,
+          "notes": "Higher incline this time - a bit harder but better overall - I feel it the next day"
+        },
+        {
+          "name": "DB Bench",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 100.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 100.0,
+              "reps": 9
+            },
+            {
+              "n": 3,
+              "weight": 100.0,
+              "reps": 8
+            }
+          ],
+          "warmup": {
+            "weight": 50.0,
+            "reps": 10
+          },
+          "sets": 3,
+          "weight": 100.0,
+          "reps": 9,
+          "notes": "This is getting pretty explosive"
+        },
+        {
+          "name": "Row Machine",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 135.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 135.0,
+          "reps": 10,
+          "notes": "Barbell Rows - Work gym - kept it fairly easy to avoid back pain"
+        },
+        {
+          "name": "Lat Pull-down",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 70.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 70.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 70.0,
+          "reps": 10,
+          "notes": "Work gym - used a single cable kneeling pull down with deliberate slow tension"
+        },
+        {
+          "name": "Accessory Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 80.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 80.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 80.0,
+          "reps": 10,
+          "notes": "Arms were cooked - 40 pound DBs"
+        },
+        {
+          "name": "Band Pull-aparts",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 20,
+          "notes": "Great tricep tension"
+        },
+        {
+          "name": "Recovery Bike",
+          "kind": "bike",
+          "focus": false,
+          "notes": "Long ride tomorrow - nothing today"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "90dbb5c5-47a6-4f60-8329-6fdb3f0b3dc0",
+      "date": "2026-10-16T12:38:58",
+      "cycle_day": 3,
+      "wave": 1,
+      "program_day": 3,
+      "day_name": "Core A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Sit-ups",
+          "kind": "reps",
+          "focus": false,
+          "sets": 4,
+          "reps": 30
+        },
+        {
+          "name": "Pallof Holds",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 30.0,
+          "notes": "37.5 on cable"
+        },
+        {
+          "name": "Plank",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 90.0,
+          "notes": "Hopefully"
+        },
+        {
+          "name": "Russian Twists",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 60,
+          "weight": 10.0
+        },
+        {
+          "name": "Alternating Toe Taps",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 16
+        },
+        {
+          "name": "Long Bike Ride",
+          "kind": "bike",
+          "focus": false,
+          "minutes": 180.0,
+          "notes": "Planning this workout for tomorrow - doing them a bit out of order"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "b344a336-2701-4da1-be77-10c037e31df1",
+      "date": "2026-10-16T15:36:09",
+      "cycle_day": 4,
+      "wave": 1,
+      "program_day": 4,
+      "day_name": "Lower B",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Box Jumps",
+          "kind": "reps",
+          "focus": false,
+          "sets": 3,
+          "reps": 8,
+          "notes": "Boxes were taken - went right into squats"
+        },
+        {
+          "name": "Squat Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 345.0,
+              "reps": 4
+            },
+            {
+              "n": 2,
+              "weight": 345.0,
+              "reps": 4
+            },
+            {
+              "n": 3,
+              "weight": 345.0,
+              "reps": 4
+            },
+            {
+              "n": 4,
+              "weight": 345.0,
+              "reps": 4
+            }
+          ],
+          "warmup_sets": [
+            {
+              "n": 1,
+              "weight": 145.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 235.0,
+              "reps": 8
+            },
+            {
+              "n": 3,
+              "weight": 325.0,
+              "reps": 4
+            }
+          ],
+          "cooldown": {
+            "weight": 285.0,
+            "reps": 12
+          },
+          "weight": 345.0,
+          "reps": 4,
+          "notes": "Great depth - cool down set was killer."
+        },
+        {
+          "name": "Speed Trap Bar",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 325.0,
+              "reps": 5
+            },
+            {
+              "n": 2,
+              "weight": 325.0,
+              "reps": 5
+            },
+            {
+              "n": 3,
+              "weight": 325.0,
+              "reps": 5
+            },
+            {
+              "n": 4,
+              "weight": 325.0,
+              "reps": 5
+            },
+            {
+              "n": 5,
+              "weight": 235.0,
+              "reps": 8
+            },
+            {
+              "n": 6,
+              "weight": 235.0,
+              "reps": 12
+            }
+          ],
+          "warmup": {
+            "weight": 235.0,
+            "reps": 6
+          },
+          "sets": 6,
+          "weight": 325.0,
+          "reps": 5,
+          "notes": "MU - large black bar, upside down handles. No chalk so I went lower when sweaty"
+        },
+        {
+          "name": "Light Lunge",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 145.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 145.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 145.0,
+          "reps": 10,
+          "notes": "Bulgarian with the split squat support at MU"
+        },
+        {
+          "name": "Calf Raises",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 135.0,
+              "reps": 15
+            },
+            {
+              "n": 3,
+              "weight": 135.0,
+              "reps": 15
+            }
+          ],
+          "sets": 3,
+          "weight": 135.0,
+          "reps": 15,
+          "notes": "Skipped to make time crunch"
+        },
+        {
+          "name": "Leg Extensions",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 300.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 300.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 300.0,
+          "reps": 12,
+          "notes": "Last 4 reps were partial"
+        },
+        {
+          "name": "Short Run",
+          "kind": "run",
+          "focus": false,
+          "notes": "Legs too fried to run - doing a long bike ride"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "89017275-a060-47fd-ba54-332a2033c583",
+      "date": "2026-10-19T23:51:15",
+      "cycle_day": 5,
+      "wave": 1,
+      "program_day": 5,
+      "day_name": "Upper A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Bench Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 225.0,
+              "reps": 7
+            },
+            {
+              "n": 2,
+              "weight": 245.0,
+              "reps": 4
+            },
+            {
+              "n": 3,
+              "weight": 245.0,
+              "reps": 4
+            },
+            {
+              "n": 4,
+              "weight": 245.0,
+              "reps": 3
+            }
+          ],
+          "warmup_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 185.0,
+              "reps": 10
+            }
+          ],
+          "cooldown": {
+            "weight": 185.0,
+            "reps": 10
+          },
+          "weight": 245.0,
+          "reps": 4,
+          "notes": "185 warm up set was 5 pause reps and then 5 continuous - the pause reps really work the chest... maybe you should end this session with pause reps with one plate and max reps? Good benching other than that"
+        },
+        {
+          "name": "Weighted Pull-Ups",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 55.0,
+              "reps": 4
+            },
+            {
+              "n": 2,
+              "weight": 55.0,
+              "reps": 4
+            },
+            {
+              "n": 3,
+              "weight": 55.0,
+              "reps": 4
+            },
+            {
+              "n": 4,
+              "weight": 45.0,
+              "reps": 4
+            }
+          ],
+          "warmup": {
+            "weight": 0.0,
+            "reps": 8
+          },
+          "max_reps": 10,
+          "weight": 55.0,
+          "reps": 4,
+          "notes": "All real good pause reps - pulling from a dead rest with arm lock out."
+        },
+        {
+          "name": "Incline DB Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 80.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 80.0,
+          "reps": 10,
+          "notes": "I had a little longer off here - so I'm not sure if I'm just feeling better today or if I'm getting better/stronger at this, but the weights were going up well."
+        },
+        {
+          "name": "Bird Dog Rows",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 100.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 100.0,
+              "reps": 8
+            },
+            {
+              "n": 3,
+              "weight": 100.0,
+              "reps": 8
+            }
+          ],
+          "sets": 3,
+          "weight": 100.0,
+          "reps": 8,
+          "notes": "No need to mess around and use the same weight that you're pressing with. You can do more."
+        },
+        {
+          "name": "Chest Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 160.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 140.0,
+              "reps": 15
+            }
+          ],
+          "sets": 2,
+          "weight": 160.0,
+          "reps": 12,
+          "notes": "Work gym - that chest press machine sucks"
+        },
+        {
+          "name": "DB Shoulder Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 60.0,
+              "reps": 6
+            },
+            {
+              "n": 2,
+              "weight": 50.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 60.0,
+          "reps": 6,
+          "notes": "Shoulders were gassed here - I did push the chest hard before doing this - should also do this before the chest press...."
+        },
+        {
+          "name": "Band Pull-aparts",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 20,
+          "notes": "This has really become a tremendous exercise for me. Find that tension point and push to it."
+        },
+        {
+          "name": "Overhead Tricep Extension",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 30.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 25.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 30.0,
+          "reps": 8,
+          "notes": "Real sore triceps"
+        },
+        {
+          "name": "Accessory Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 90.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 90.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 90.0,
+          "reps": 10,
+          "notes": "EZ bar - standing straight - good work"
+        },
+        {
+          "name": "Pec Deck",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 140.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 100.0,
+              "reps": 8
+            }
+          ],
+          "sets": 2,
+          "weight": 140.0,
+          "reps": 8,
+          "notes": "Work Gym - machines not great but tension was good here"
+        },
+        {
+          "name": "Moderate Run",
+          "kind": "run",
+          "focus": false,
+          "notes": "67 minute bike ride!"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "da87a469-7db0-4f3d-8ec1-9350a2e39f62",
+      "date": "2026-10-21T07:36:23",
+      "cycle_day": 6,
+      "wave": 1,
+      "program_day": 6,
+      "day_name": "Tempo Run",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Tempo Run",
+          "kind": "run",
+          "focus": false,
+          "distance": 1.0,
+          "pace": 9.716666666666667,
+          "notes": "Back pain - got 21k steps. Keep chugging along on steps and run as much as you can. This was also at night"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "3a521e53-c3f3-4bb9-b00b-f5ac1ad218bb",
+      "date": "2026-10-23T08:04:22",
+      "cycle_day": 7,
+      "wave": 1,
+      "program_day": 7,
+      "day_name": "Lower A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Trap-Bar Deadlift Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 483.0,
+              "reps": 4
+            },
+            {
+              "n": 2,
+              "weight": 483.0,
+              "reps": 2
+            },
+            {
+              "n": 3,
+              "weight": 483.0,
+              "reps": 4
+            },
+            {
+              "n": 4,
+              "weight": 483.0,
+              "reps": 4
+            }
+          ],
+          "warmup_sets": [
+            {
+              "n": 1,
+              "weight": 253.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 343.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 433.0,
+              "reps": 5
+            }
+          ],
+          "cooldown": {
+            "weight": 315.0,
+            "reps": 15
+          },
+          "weight": 483.0,
+          "reps": 4,
+          "notes": "On the set where I only got 2 reps - I was trying to do them from rest instead of tough and go - not as good for me"
+        },
+        {
+          "name": "Speed Squats",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 2,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 3,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 4,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 5,
+              "weight": 225.0,
+              "reps": 5
+            },
+            {
+              "n": 6,
+              "weight": 225.0,
+              "reps": 15
+            }
+          ],
+          "sets": 6,
+          "weight": 225.0,
+          "reps": 15,
+          "notes": "Legs fried after this"
+        },
+        {
+          "name": "Bulgarian Lunges",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 135.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 135.0,
+          "reps": 10,
+          "notes": "Solid"
+        },
+        {
+          "name": "Side Lunge Squats (barbell)",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 45.0,
+              "reps": 10
+            }
+          ],
+          "sets": 1,
+          "weight": 45.0,
+          "reps": 10,
+          "notes": "Good"
+        },
+        {
+          "name": "Hamstring Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 130.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 160.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 160.0,
+          "reps": 12,
+          "notes": "Do these in the opposite order next time"
+        },
+        {
+          "name": "Leg Extensions",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 300.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 300.0,
+              "reps": 15
+            }
+          ],
+          "sets": 2,
+          "weight": 300.0,
+          "reps": 15,
+          "notes": "Work gym machine"
+        },
+        {
+          "name": "Wall Squat",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 90.0,
+          "notes": "With 45 pound plate"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "650ea860-29d7-4fd5-b29b-c480e1be438e",
+      "date": "2026-10-23T08:08:42",
+      "cycle_day": 8,
+      "wave": 1,
+      "program_day": 8,
+      "day_name": "Arms",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Push-ups",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 55,
+          "notes": "Super fast at the beginning"
+        },
+        {
+          "name": "Pec Deck",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 140.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 140.0,
+              "reps": 8
+            },
+            {
+              "n": 3,
+              "weight": 100.0,
+              "reps": 8
+            }
+          ],
+          "sets": 3,
+          "weight": 140.0,
+          "reps": 8,
+          "notes": "Work gym - definitely a harder machine than MU"
+        },
+        {
+          "name": "Curls",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 110.0,
+              "reps": 5
+            },
+            {
+              "n": 2,
+              "weight": 120.0,
+              "reps": 5
+            },
+            {
+              "n": 3,
+              "weight": 100.0,
+              "reps": 10
+            }
+          ],
+          "warmup": {
+            "weight": 80.0,
+            "reps": 10
+          },
+          "weight": 120.0,
+          "reps": 5,
+          "notes": "With dumbbells, full stop at bottom. 40s, 55s, 60s, 50s. Good amount of reps"
+        },
+        {
+          "name": "Skull-crushers",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 110.0,
+              "reps": 5
+            },
+            {
+              "n": 2,
+              "weight": 120.0,
+              "reps": 5
+            },
+            {
+              "n": 3,
+              "weight": 100.0,
+              "reps": 10
+            }
+          ],
+          "warmup": {
+            "weight": 80.0,
+            "reps": 10
+          },
+          "weight": 120.0,
+          "reps": 5,
+          "notes": "I think I could have done more here if I wasn't focused on matching the curls"
+        },
+        {
+          "name": "Lateral Raises",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 40.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 40.0,
+              "reps": 12
+            },
+            {
+              "n": 3,
+              "weight": 40.0,
+              "reps": 12
+            }
+          ],
+          "sets": 3,
+          "weight": 40.0,
+          "reps": 12,
+          "notes": "20 lb dumbbells"
+        },
+        {
+          "name": "Inside Hammer Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 40.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 40.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 40.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 40.0,
+          "reps": 10
+        },
+        {
+          "name": "Overhead Tricep Extension",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 30.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 25.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 30.0,
+          "reps": 8,
+          "notes": "Real sore triceps"
+        },
+        {
+          "name": "DB Shoulder Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 60.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 60.0,
+              "reps": 12
+            },
+            {
+              "n": 3,
+              "weight": 60.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 60.0,
+          "reps": 12,
+          "notes": "Did these before the lat raises, this lift is getting much stronger"
+        },
+        {
+          "name": "Tricep Pushdown (cable)",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 67.5,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 82.5,
+              "reps": 12
+            },
+            {
+              "n": 3,
+              "weight": 82.5,
+              "reps": 12
+            }
+          ],
+          "sets": 3,
+          "weight": 82.5,
+          "reps": 12,
+          "notes": "Skipped due to time crunch but leaving weight here for next time"
+        },
+        {
+          "name": "Chin-Ups (Max reps)",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 8,
+          "notes": "Skipped for time crunch"
+        },
+        {
+          "name": "Dips (max)",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 10,
+          "notes": "Skipped for time crunch"
+        },
+        {
+          "name": "Seated Tricep Pushdown (machine)",
+          "kind": "strength",
+          "focus": false,
+          "notes": "Optional alternative if cables are taken"
+        },
+        {
+          "name": "1 Mile",
+          "kind": "run",
+          "focus": false,
+          "distance": 1.0,
+          "pace": 10.5,
+          "notes": "Skipped for time crunch - last mile time was 9:42 though."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "24595272-0111-4d77-b842-8529dcbc9867",
+      "date": "2026-10-25T20:29:32",
+      "cycle_day": 9,
+      "wave": 1,
+      "program_day": 9,
+      "day_name": "Core B",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Sit-ups",
+          "kind": "reps",
+          "focus": false,
+          "sets": 4,
+          "reps": 30
+        },
+        {
+          "name": "Supermans",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 60.0
+        },
+        {
+          "name": "Dead Hang",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 60.0,
+          "notes": "Knruled pull-up bar - tough on fingers"
+        },
+        {
+          "name": "Pistol Squats (BOSU)",
+          "kind": "reps",
+          "focus": false,
+          "sets": 1,
+          "reps": 10,
+          "notes": "Tough on knees and quads - might be best to skip these until you weigh less"
+        },
+        {
+          "name": "Single-Leg Deadlift (BOSU)",
+          "kind": "reps",
+          "focus": false,
+          "sets": 1,
+          "reps": 25
+        },
+        {
+          "name": "Flush Cardio",
+          "kind": "cardio_choice",
+          "focus": false,
+          "notes": "None - was planning on doing late at night but Lily called out of work"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "205a94c5-872a-4f07-b593-734da542b5e2",
+      "date": "2026-10-25T20:29:52",
+      "cycle_day": 1,
+      "wave": 2,
+      "program_day": 10,
+      "day_name": "Marathon Builder",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Marathon Builder",
+          "kind": "run",
+          "focus": false,
+          "distance": 0.84,
+          "pace": 9.7,
+          "notes": "Really tight back again. Biked for 90 minutes afterwards"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "3043c1e8-a974-48bb-bf63-b32fe4b0af5c",
+      "date": "2026-10-28T08:48:07",
+      "cycle_day": 2,
+      "wave": 2,
+      "program_day": 11,
+      "day_name": "Upper B",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Weighted Chin-Ups",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 70.0,
+              "reps": 4
+            },
+            {
+              "n": 2,
+              "weight": 80.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 90.0,
+              "reps": 3
+            },
+            {
+              "n": 4,
+              "weight": 90.0
+            }
+          ],
+          "warmup": {
+            "weight": 0.0,
+            "reps": 15
+          },
+          "max_reps": 12,
+          "weight": 90.0,
+          "reps": 3,
+          "notes": "Work Gym - good full lock out on every rep"
+        },
+        {
+          "name": "Overhead Press",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 155.0,
+              "reps": 6
+            },
+            {
+              "n": 2,
+              "weight": 185.0,
+              "reps": 2
+            },
+            {
+              "n": 3,
+              "weight": 175.0,
+              "reps": 3
+            },
+            {
+              "n": 4,
+              "weight": 175.0,
+              "reps": 3
+            }
+          ],
+          "warmup": {
+            "weight": 95.0,
+            "reps": 15
+          },
+          "weight": 185.0,
+          "reps": 2,
+          "notes": "155 is definitely a comfortable overhead press - the baseline position gets less stable and harder to control after that - focus on form"
+        },
+        {
+          "name": "Chest-Supported DB Row",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 90.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 90.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 90.0,
+              "reps": 10
+            }
+          ],
+          "warmup": {
+            "weight": 50.0,
+            "reps": 10
+          },
+          "sets": 3,
+          "weight": 90.0,
+          "reps": 10,
+          "notes": "37 degree incline - feel this in the lats well, I think it's helping the chins/pulls too - keep pushing this up with good form"
+        },
+        {
+          "name": "DB Bench",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 100.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 100.0,
+              "reps": 9
+            },
+            {
+              "n": 3,
+              "weight": 100.0,
+              "reps": 8
+            }
+          ],
+          "warmup": {
+            "weight": 50.0,
+            "reps": 10
+          },
+          "sets": 3,
+          "weight": 100.0,
+          "reps": 9,
+          "notes": "DBs were not flying this time but I got all the reps done, I think the overhead presses sapped me a bit more since we went heavier there"
+        },
+        {
+          "name": "Row Machine",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 135.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 135.0,
+          "reps": 10,
+          "notes": "Work gym - Barbell rows since machine sucks - kept light for lower back's sake"
+        },
+        {
+          "name": "Lat Pull-down",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 77.5,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 77.5,
+              "reps": 8
+            }
+          ],
+          "sets": 2,
+          "weight": 77.5,
+          "reps": 8,
+          "notes": "Work gym - used a single cable kneeling pull down for good isolation since that machine sucks"
+        },
+        {
+          "name": "Accessory Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 90.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 90.0,
+              "reps": 6
+            }
+          ],
+          "sets": 2,
+          "weight": 90.0,
+          "reps": 10,
+          "notes": "Upright EZ Bar rows - minimal rest between sets so arms gave out - repped out the barbell afterwards for a pump"
+        },
+        {
+          "name": "Band Pull-aparts",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 20,
+          "notes": "Strong tension"
+        },
+        {
+          "name": "Recovery Bike",
+          "kind": "bike",
+          "focus": false,
+          "notes": "Softball! Played great, ~21k steps"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "616c6138-c432-488c-a9a2-463543973336",
+      "date": "2026-10-28T08:50:28",
+      "cycle_day": 3,
+      "wave": 2,
+      "program_day": 12,
+      "day_name": "Core A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Sit-ups",
+          "kind": "reps",
+          "focus": false,
+          "sets": 3,
+          "reps": 30,
+          "notes": "Was extremely sore from the workout/softball day before, and my core and hips were tight. Failed on the third set and didn't do the fourth"
+        },
+        {
+          "name": "Pallof Holds",
+          "kind": "timed",
+          "focus": false,
+          "notes": "37.5 on cable, higher up on hold, single arm"
+        },
+        {
+          "name": "Plank",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 90.0,
+          "notes": "Weak core day and held 90 - push to 120+ next time"
+        },
+        {
+          "name": "Russian Twists",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 60,
+          "weight": 8.0,
+          "notes": "Medicine ball is smaller at the work gym than MU, so I used a lighter ball"
+        },
+        {
+          "name": "Alternating Toe Taps",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 16,
+          "notes": "These should be good for the back"
+        },
+        {
+          "name": "Long Bike Ride",
+          "kind": "bike",
+          "focus": false,
+          "notes": "Meal prepping got my energy.... will ride bike for two hours after squat day tomorrow!"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "34610c32-b2d7-4e81-bc20-31ad0c88a542",
+      "date": "2026-10-30T05:58:25",
+      "cycle_day": 4,
+      "wave": 2,
+      "program_day": 13,
+      "day_name": "Lower B",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Box Jumps",
+          "kind": "reps",
+          "focus": false,
+          "sets": 3,
+          "reps": 8,
+          "notes": "30\""
+        },
+        {
+          "name": "Squat Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 375.0,
+              "reps": 3
+            },
+            {
+              "n": 2,
+              "weight": 375.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 375.0,
+              "reps": 1
+            },
+            {
+              "n": 4,
+              "weight": 355.0,
+              "reps": 3
+            }
+          ],
+          "warmup_sets": [
+            {
+              "n": 1,
+              "weight": 235.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 285.0,
+              "reps": 8
+            },
+            {
+              "n": 3,
+              "weight": 325.0,
+              "reps": 4
+            }
+          ],
+          "cooldown": {
+            "weight": 285.0,
+            "reps": 12
+          },
+          "weight": 375.0,
+          "reps": 3,
+          "notes": "I did two reps of 355 after that 1 of 375 too - got a bit too heavy on the legs. Good depth overall"
+        },
+        {
+          "name": "Speed Trap Bar",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 325.0,
+              "reps": 6
+            },
+            {
+              "n": 2,
+              "weight": 325.0,
+              "reps": 6
+            },
+            {
+              "n": 3,
+              "weight": 325.0,
+              "reps": 6
+            },
+            {
+              "n": 4,
+              "weight": 325.0,
+              "reps": 6
+            },
+            {
+              "n": 5,
+              "weight": 325.0,
+              "reps": 6
+            },
+            {
+              "n": 6,
+              "weight": 325.0,
+              "reps": 20
+            }
+          ],
+          "warmup": {
+            "weight": 235.0,
+            "reps": 10
+          },
+          "sets": 6,
+          "weight": 325.0,
+          "reps": 20,
+          "notes": "Great last set - high handle black trap bar at MU"
+        },
+        {
+          "name": "Light Lunge",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 145.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 145.0,
+              "reps": 10
+            }
+          ],
+          "sets": 2,
+          "weight": 145.0,
+          "reps": 10,
+          "notes": "Walking forward lunges - felt good"
+        },
+        {
+          "name": "Calf Raises",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 135.0,
+              "reps": 15
+            },
+            {
+              "n": 3,
+              "weight": 135.0,
+              "reps": 15
+            }
+          ],
+          "sets": 3,
+          "weight": 135.0,
+          "reps": 15,
+          "notes": "Skipped to make time crunch"
+        },
+        {
+          "name": "Leg Extensions",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 300.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 300.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 300.0,
+          "reps": 15,
+          "notes": "Failure on second set"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "75afeff1-1636-4aee-9658-fc339d8bcba6",
+      "date": "2026-11-03T19:55:44",
+      "cycle_day": 5,
+      "wave": 2,
+      "program_day": 14,
+      "day_name": "Upper A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Bench Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 245.0,
+              "reps": 4
+            },
+            {
+              "n": 2,
+              "weight": 255.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 255.0,
+              "reps": 2
+            },
+            {
+              "n": 4,
+              "weight": 225.0,
+              "reps": 6
+            }
+          ],
+          "warmup_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 225.0,
+              "reps": 8
+            }
+          ],
+          "cooldown": {
+            "weight": 185.0,
+            "reps": 12
+          },
+          "weight": 255.0,
+          "reps": 3,
+          "notes": "In a bit of a rush - pause reps to keep working the chest strong"
+        },
+        {
+          "name": "Weighted Pull-Ups",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 55.0,
+              "reps": 4
+            },
+            {
+              "n": 2,
+              "weight": 65.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 65.0,
+              "reps": 3
+            },
+            {
+              "n": 4,
+              "weight": 65.0,
+              "reps": 3
+            }
+          ],
+          "warmup": {
+            "reps": 5
+          },
+          "max_reps": 12,
+          "weight": 65.0,
+          "reps": 3,
+          "notes": "In a rush - good strong pause reps"
+        },
+        {
+          "name": "Incline DB Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 75.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 80.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 80.0,
+          "reps": 10,
+          "notes": "I had a little longer off here - so I'm not sure if I'm just feeling better today or if I'm getting better/stronger at this, but the weights were going up well."
+        },
+        {
+          "name": "Bird Dog Rows",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 100.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 100.0,
+              "reps": 8
+            },
+            {
+              "n": 3,
+              "weight": 100.0,
+              "reps": 8
+            }
+          ],
+          "sets": 3,
+          "weight": 100.0,
+          "reps": 8,
+          "notes": "No need to mess around and use the same weight that you're pressing with. You can do more."
+        },
+        {
+          "name": "Chest Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 160.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 140.0,
+              "reps": 15
+            }
+          ],
+          "sets": 2,
+          "weight": 160.0,
+          "reps": 12,
+          "notes": "Work gym - that chest press machine sucks"
+        },
+        {
+          "name": "DB Shoulder Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 60.0,
+              "reps": 12
+            },
+            {
+              "n": 2,
+              "weight": 60.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 60.0,
+          "reps": 12,
+          "notes": "Did these before the lat raises, this lift is getting much stronger"
+        },
+        {
+          "name": "Band Pull-aparts",
+          "kind": "reps",
+          "focus": false,
+          "sets": 2,
+          "reps": 20,
+          "notes": "Strong tension"
+        },
+        {
+          "name": "Overhead Tricep Extension",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 30.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 25.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 30.0,
+          "reps": 8,
+          "notes": "Real sore triceps"
+        },
+        {
+          "name": "Accessory Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 90.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 90.0,
+              "reps": 6
+            }
+          ],
+          "sets": 2,
+          "weight": 90.0,
+          "reps": 10,
+          "notes": "Upright EZ Bar rows - minimal rest between sets so arms gave out - repped out the barbell afterwards for a pump"
+        },
+        {
+          "name": "Pec Deck",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 140.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 140.0,
+              "reps": 8
+            }
+          ],
+          "sets": 2,
+          "weight": 140.0,
+          "reps": 8,
+          "notes": "I only had time to do the benching and pulling to make it to dinner on time after a long work day - leaving all of the other weights as what they were last time"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "c4fd764f-b46c-4fc2-8a60-c3185b26f181",
+      "date": "2026-11-03T19:57:35",
+      "cycle_day": 6,
+      "wave": 2,
+      "program_day": 15,
+      "day_name": "Tempo Run",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Tempo Run",
+          "kind": "run",
+          "focus": false,
+          "distance": 1.0,
+          "pace": 9.716666666666667,
+          "notes": "Skipped for softball - just waiting until the season ends shortly"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "5d13da29-6eda-4ecf-9747-3d7e5cb0577c",
+      "date": "2026-11-03T20:01:16",
+      "cycle_day": 7,
+      "wave": 2,
+      "program_day": 16,
+      "day_name": "Lower A",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Trap-Bar Deadlift Power Waves",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 505.0,
+              "reps": 3
+            },
+            {
+              "n": 2,
+              "weight": 505.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 505.0,
+              "reps": 3
+            },
+            {
+              "n": 4,
+              "weight": 505.0,
+              "reps": 3
+            }
+          ],
+          "warmup_sets": [
+            {
+              "n": 1,
+              "weight": 235.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 325.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 415.0,
+              "reps": 6
+            }
+          ],
+          "cooldown": {
+            "weight": 325.0,
+            "reps": 20
+          },
+          "weight": 505.0,
+          "reps": 3,
+          "notes": "This was an insanely good deadlift session - MU gray hex bar upright handles"
+        },
+        {
+          "name": "Speed Squats",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 235.0,
+              "reps": 5
+            },
+            {
+              "n": 2,
+              "weight": 235.0,
+              "reps": 5
+            },
+            {
+              "n": 3,
+              "weight": 285.0,
+              "reps": 5
+            },
+            {
+              "n": 4,
+              "weight": 325.0,
+              "reps": 3
+            },
+            {
+              "n": 5,
+              "weight": 325.0,
+              "reps": 4
+            },
+            {
+              "n": 6,
+              "weight": 325.0,
+              "reps": 4
+            }
+          ],
+          "sets": 6,
+          "weight": 325.0,
+          "reps": 4,
+          "notes": "Just a dog of a dude this day - great form too"
+        },
+        {
+          "name": "Bulgarian Lunges",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 145.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 145.0,
+              "reps": 8
+            }
+          ],
+          "sets": 2,
+          "weight": 145.0,
+          "reps": 8,
+          "notes": "Little more sapped than usual but these were strong, just got sore on reps 5-8 and didn't need to push"
+        },
+        {
+          "name": "Side Lunge Squats (barbell)",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 55.0,
+              "reps": 10
+            }
+          ],
+          "sets": 1,
+          "weight": 55.0,
+          "reps": 10,
+          "notes": "Good depth and breadth of stance"
+        },
+        {
+          "name": "Hamstring Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 180.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 180.0,
+              "reps": 15
+            }
+          ],
+          "sets": 2,
+          "weight": 180.0,
+          "reps": 15,
+          "notes": "MU Machine - I'm pretty sure it was 180.. couple days since I did it unfortunately"
+        },
+        {
+          "name": "Leg Extensions",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 300.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 300.0,
+              "reps": 12
+            }
+          ],
+          "sets": 2,
+          "weight": 300.0,
+          "reps": 15,
+          "notes": "Failure on second set - second time in a row that happened at 15 then 12"
+        },
+        {
+          "name": "Wall Squat",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 90.0,
+          "notes": "With 45 pound plate"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "472ebeec-32f0-4d2b-a4b7-6f1376cdd191",
+      "date": "2026-11-03T20:07:51",
+      "cycle_day": 8,
+      "wave": 2,
+      "program_day": 17,
+      "day_name": "Arms",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Push-ups",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 50,
+          "notes": "5 less than last time but I was heavy today"
+        },
+        {
+          "name": "Pec Deck",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 120.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 120.0,
+              "reps": 8
+            },
+            {
+              "n": 3,
+              "weight": 120.0,
+              "reps": 8
+            }
+          ],
+          "sets": 3,
+          "weight": 120.0,
+          "reps": 10,
+          "notes": "Work gym machine - not easy"
+        },
+        {
+          "name": "Curls",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 2
+            },
+            {
+              "n": 2,
+              "weight": 130.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 130.0,
+              "reps": 3
+            }
+          ],
+          "warmup": {
+            "weight": 80.0,
+            "reps": 10
+          },
+          "weight": 135.0,
+          "reps": 2,
+          "notes": "40 DBs, 135 barbell, 65 dbs, 65 dbs. It is hard to lift off from a fully stretched rest at this weight, I'm able to do 4 reps per arm if I rest them at a neutral grip and twist up into a normal curl as they come up"
+        },
+        {
+          "name": "Skull-crushers",
+          "kind": "power_wave",
+          "focus": false,
+          "wave_sets": [
+            {
+              "n": 1,
+              "weight": 135.0,
+              "reps": 3
+            },
+            {
+              "n": 2,
+              "weight": 130.0,
+              "reps": 3
+            },
+            {
+              "n": 3,
+              "weight": 130.0,
+              "reps": 4
+            }
+          ],
+          "warmup": {
+            "weight": 80.0,
+            "reps": 10
+          },
+          "weight": 135.0,
+          "reps": 3,
+          "notes": "DBs 40, 135 barbell, 65 dbs - all hard, good tension. triceps are most sore part (it's usually the biceps)"
+        },
+        {
+          "name": "Lateral Raises",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 40.0,
+              "reps": 15
+            },
+            {
+              "n": 2,
+              "weight": 50.0,
+              "reps": 12
+            },
+            {
+              "n": 3,
+              "weight": 70.0,
+              "reps": 4
+            }
+          ],
+          "sets": 3,
+          "weight": 70.0,
+          "reps": 4,
+          "notes": "20 dbs, 25 dbs, 35 dbs, 20dbs for 11 more reps after failure on the 35s - good set!"
+        },
+        {
+          "name": "Inside Hammer Curls",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 40.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 40.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 40.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 40.0,
+          "reps": 10,
+          "notes": "Hard but got it done. taxing on forearm/elbow area"
+        },
+        {
+          "name": "Overhead Tricep Extension",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 40.0,
+              "reps": 8
+            },
+            {
+              "n": 2,
+              "weight": 40.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 40.0,
+              "reps": 10
+            }
+          ],
+          "sets": 3,
+          "weight": 40.0,
+          "reps": 10,
+          "notes": "Was able to get it done today. This was a heavy day for the triceps"
+        },
+        {
+          "name": "DB Shoulder Press",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 60.0,
+              "reps": 10
+            },
+            {
+              "n": 2,
+              "weight": 60.0,
+              "reps": 10
+            },
+            {
+              "n": 3,
+              "weight": 60.0,
+              "reps": 8
+            }
+          ],
+          "sets": 3,
+          "weight": 60.0,
+          "reps": 10,
+          "notes": "Shoulder were a bit sapped here from heavier lat raises, felt strong in the moment but I did more reps last time - might be time to bump the weight"
+        },
+        {
+          "name": "Tricep Pushdown (cable)",
+          "kind": "strength",
+          "focus": false,
+          "work_sets": [
+            {
+              "n": 1,
+              "weight": 77.5,
+              "reps": 20
+            },
+            {
+              "n": 2,
+              "weight": 37.5,
+              "reps": 8
+            },
+            {
+              "n": 3,
+              "weight": 37.5,
+              "reps": 8
+            }
+          ],
+          "sets": 3,
+          "weight": 77.5,
+          "reps": 20,
+          "notes": "Work gym - first set was a two hand bar full-stack. 2/3 were single arm almost kickback style with strict form - much tougher on the triceps."
+        },
+        {
+          "name": "Chin-Ups (Max reps)",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 12,
+          "notes": "Hard after 6, good lock-out"
+        },
+        {
+          "name": "Dips (max)",
+          "kind": "max_reps",
+          "focus": false,
+          "reps": 15,
+          "notes": "Hard - triceps sore"
+        },
+        {
+          "name": "1 Mile",
+          "kind": "run",
+          "focus": false,
+          "distance": 1.0,
+          "pace": 10.5,
+          "notes": "Skipped this - softball tomorrow last game of the year, not running before that need my legs fresh. Will bike"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "d516326a-026c-4d4e-9eff-eb44c7200463",
+      "date": "2026-11-06T12:48:35",
+      "cycle_day": 9,
+      "wave": 2,
+      "program_day": 18,
+      "day_name": "Core B",
+      "mesocycle_completed": false,
+      "lifts": [
+        {
+          "name": "Sit-ups",
+          "kind": "reps",
+          "focus": false,
+          "sets": 4,
+          "reps": 30,
+          "notes": "Tight legs still"
+        },
+        {
+          "name": "Side Planks",
+          "kind": "timed",
+          "focus": false,
+          "notes": "Very hard - grind it out"
+        },
+        {
+          "name": "Supermans",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 60.0,
+          "notes": "Grind it out"
+        },
+        {
+          "name": "Dead Hang",
+          "kind": "timed",
+          "focus": false,
+          "seconds": 60.0,
+          "notes": "Black bar at work gym - good forearm work"
+        },
+        {
+          "name": "Pistol Squats (BOSU)",
+          "kind": "reps",
+          "focus": false,
+          "notes": "Skipped - legs sore from softball"
+        },
+        {
+          "name": "Single-Leg Deadlift (BOSU)",
+          "kind": "reps",
+          "focus": false,
+          "sets": 1,
+          "reps": 25
+        }
+      ],
+      "notes": ""
     }
   ],
   "measurements": [
