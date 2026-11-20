@@ -51,6 +51,11 @@ MEASUREMENT_FIELDS = [
 ]
 WAVE_LOAD_PCT = {1: 0.80, 2: 0.85, 3: 0.90, 4: 1.00}
 WAVE_4_GOAL_PCT = 1.05
+CYCLE_LENGTH = 7
+WAVE_COUNT = 4
+MESOCYCLE_DAYS = WAVE_COUNT * CYCLE_LENGTH
+WEEKDAYS = ("", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+OLD_9_TO_7_DAY = {1: 1, 2: 2, 3: 4, 4: 3, 5: 5, 6: 6, 7: 6, 8: 7, 9: 7}
 CHART_COLORS = [GOLD, BLUE, GREEN, CRIMSON, "#c084fc", "#fb923c", "#67e8f9"]
 NAV = {
     "dashboard": 0,
@@ -129,10 +134,11 @@ def E(
 DEFAULT_PROGRAM = [
     {
         "day": 1,
+        "weekday": "Sunday",
         "name": "Marathon Builder",
         "short": "Marathon",
         "is_rest": False,
-        "tag": "Run",
+        "tag": "Sunday · long run",
         "exercises": [
             E(
                 "Marathon Builder",
@@ -146,10 +152,11 @@ DEFAULT_PROGRAM = [
     },
     {
         "day": 2,
+        "weekday": "Monday",
         "name": "Upper B",
         "short": "Upper B",
         "is_rest": False,
-        "tag": "Push / pull",
+        "tag": "Monday · bike",
         "exercises": [
             E(
                 "Weighted Chin-Ups",
@@ -172,29 +179,11 @@ DEFAULT_PROGRAM = [
     },
     {
         "day": 3,
-        "name": "Core A",
-        "short": "Core A",
+        "weekday": "Tuesday",
+        "name": "Lower A",
+        "short": "Lower A",
         "is_rest": False,
-        "tag": "Core + bike",
-        "exercises": [
-            E("Sit-ups", "reps", "4×30+", "core"),
-            E("Pallof Holds", "timed", "3×30 seconds+", "core"),
-            E("Plank", "timed", "1× max time", "core", highlight=True),
-            E("Russian Twists", "max_reps", "1× max reps", "core"),
-            E("Alternating Toe Taps", "reps", "2×16", "core"),
-            E("90/90 Hip Switches", "reps", "2×6–8 each way", "core"),
-            E("Dead Bugs", "reps", "3×6–8 each side — slow", "core"),
-            E("Pallof Press", "strength", "3×8–10 each side", "core"),
-            E("Kneeling Plate Woodchop", "strength", "3×8 each side — high to low, stay tall", "core"),
-            E("Long Bike Ride", "bike", "Long ride after core", "cardio"),
-        ],
-    },
-    {
-        "day": 4,
-        "name": "Lower B",
-        "short": "Lower B",
-        "is_rest": False,
-        "tag": "Squat",
+        "tag": "Tuesday · bike",
         "exercises": [
             E("Box Jumps", "reps", "3×6–8"),
             E(
@@ -208,15 +197,36 @@ DEFAULT_PROGRAM = [
             E("Light Lunge", "strength", "2×8–10"),
             E("Calf Raises", "strength", "3×15"),
             E("Leg Extensions", "strength", "2×12–15"),
-            E("Short Run", "run", "Short run finisher", "cardio", focus_metric="pace"),
+            E("Moderate Bike", "bike", "Bike after squat", "cardio"),
+        ],
+    },
+    {
+        "day": 4,
+        "weekday": "Wednesday",
+        "name": "Core A",
+        "short": "Core A",
+        "is_rest": False,
+        "tag": "Wednesday · long bike or run",
+        "exercises": [
+            E("Sit-ups", "reps", "4×30+", "core"),
+            E("Pallof Holds", "timed", "3×30 seconds+", "core"),
+            E("Plank", "timed", "1× max time", "core", highlight=True),
+            E("Russian Twists", "max_reps", "1× max reps", "core"),
+            E("Alternating Toe Taps", "reps", "2×16", "core"),
+            E("90/90 Hip Switches", "reps", "2×6–8 each way", "core"),
+            E("Dead Bugs", "reps", "3×6–8 each side — slow", "core"),
+            E("Pallof Press", "strength", "3×8–10 each side", "core"),
+            E("Kneeling Plate Woodchop", "strength", "3×8 each side — high to low, stay tall", "core"),
+            E("Long Bike or Run", "cardio_choice", "Long ride or run after core", "cardio"),
         ],
     },
     {
         "day": 5,
+        "weekday": "Thursday",
         "name": "Upper A",
         "short": "Upper A",
         "is_rest": False,
-        "tag": "Bench / pull",
+        "tag": "Thursday · bike or run",
         "exercises": [
             E(
                 "Bench Power Waves",
@@ -242,31 +252,16 @@ DEFAULT_PROGRAM = [
             E("Overhead Tricep Extension", "strength", "2×10"),
             E("Accessory Curls", "strength", "2×15–10"),
             E("Pec Deck", "strength", "2×8–10"),
-            E("Moderate Run", "run", "Moderate run finisher", "cardio", focus_metric="pace"),
+            E("Bike or Run", "cardio_choice", "Bike or run finisher", "cardio"),
         ],
     },
     {
         "day": 6,
-        "name": "Tempo Run",
-        "short": "Tempo",
+        "weekday": "Friday",
+        "name": "Lower B",
+        "short": "Lower B",
         "is_rest": False,
-        "tag": "Run",
-        "exercises": [
-            E(
-                "Tempo Run",
-                "run",
-                "Track distance and pace. Beat last Marathon Builder pace.",
-                "cardio",
-                focus_metric="pace",
-            ),
-        ],
-    },
-    {
-        "day": 7,
-        "name": "Lower A",
-        "short": "Lower A",
-        "is_rest": False,
-        "tag": "Deadlift",
+        "tag": "Friday · bike or run",
         "exercises": [
             E(
                 "Trap-Bar Deadlift Power Waves",
@@ -281,15 +276,16 @@ DEFAULT_PROGRAM = [
             E("Hamstring Curls", "strength", "2×12–15"),
             E("Leg Extensions", "strength", "2×12–15"),
             E("Wall Squat", "timed", "1× max"),
-            E("Moderate Bike", "bike", "Moderate bike finisher", "cardio"),
+            E("Bike or Run", "cardio_choice", "Bike or run finisher", "cardio"),
         ],
     },
     {
-        "day": 8,
-        "name": "Arms",
-        "short": "Arms",
+        "day": 7,
+        "weekday": "Saturday",
+        "name": "Upper C + Core B",
+        "short": "C+Core B",
         "is_rest": False,
-        "tag": "Arms + mile",
+        "tag": "Saturday · bike or run",
         "exercises": [
             E("Push-ups", "max_reps", "1× max reps", highlight=True, pb_key="Push-Ups (reps)"),
             E("Pec Deck", "strength", "3×8–10"),
@@ -303,25 +299,6 @@ DEFAULT_PROGRAM = [
             E("Chin-Ups (Max reps)", "max_reps", "1× max reps", highlight=True),
             E("Dips (max)", "max_reps", "1× max reps"),
             E("Seated Tricep Pushdown (machine)", "strength", "2×8–12"),
-            E(
-                "1 Mile",
-                "run",
-                "1 mile, fast as possible. Track pace.",
-                "cardio",
-                highlight=True,
-                focus_metric="pace",
-                fixed_distance=1,
-                pb_key="Mile Time",
-            ),
-        ],
-    },
-    {
-        "day": 9,
-        "name": "Core B",
-        "short": "Core B",
-        "is_rest": False,
-        "tag": "Core + flush",
-        "exercises": [
             E("Sit-ups", "reps", "4×30+", "core"),
             E("Side Planks", "timed", "2×45 seconds+", "core"),
             E("Supermans", "timed", "2×60 seconds+", "core"),
@@ -332,7 +309,17 @@ DEFAULT_PROGRAM = [
             E("Glute Bridge March", "reps", "2×8 each side", "core"),
             E("Bird Dog", "reps", "2×6–8 each side — slow", "core"),
             E("Plate Around-the-World", "strength", "2×6–8 each direction — plate circles the torso", "core"),
-            E("Flush Cardio", "cardio_choice", "Flush legs with bike or light run", "cardio"),
+            E(
+                "1 Mile",
+                "run",
+                "1 mile, fast as possible. Track pace.",
+                "cardio",
+                highlight=True,
+                focus_metric="pace",
+                fixed_distance=1,
+                pb_key="Mile Time",
+            ),
+            E("Bike or Run", "cardio_choice", "Bike or extra run if you skip the mile", "cardio"),
         ],
     },
 ]
@@ -342,51 +329,46 @@ def clone_program() -> list[dict[str, Any]]:
     return json.loads(json.dumps(DEFAULT_PROGRAM))
 
 
+def weekday_name(day: int) -> str:
+    if 1 <= int(day) <= 7:
+        return WEEKDAYS[int(day)]
+    return f"Day {day}"
+
+
 def program_is_current(program: Any) -> bool:
-    if not (isinstance(program, list) and len(program) == 9 and isinstance(program[0], dict)):
+    if not (isinstance(program, list) and len(program) == CYCLE_LENGTH and isinstance(program[0], dict)):
         return False
     if not isinstance(program[0].get("exercises"), list):
         return False
-    day2 = next((d for d in program if d.get("day") == 2), None)
-    day3 = next((d for d in program if d.get("day") == 3), None)
-    day4 = next((d for d in program if d.get("day") == 4), None)
-    day5 = next((d for d in program if d.get("day") == 5), None)
-    day7 = next((d for d in program if d.get("day") == 7), None)
-    day8 = next((d for d in program if d.get("day") == 8), None)
-    day9 = next((d for d in program if d.get("day") == 9), None)
-    if not day2 or not day3 or not day4 or not day5 or not day7 or not day8 or not day9:
+    by_day = {d.get("day"): d for d in program if isinstance(d, dict)}
+    if set(by_day) != set(range(1, CYCLE_LENGTH + 1)):
         return False
-    names2 = [e.get("name") for e in day2.get("exercises") or []]
-    names3 = [e.get("name") for e in day3.get("exercises") or []]
-    names5 = [e.get("name") for e in day5.get("exercises") or []]
-    names7 = [e.get("name") for e in day7.get("exercises") or []]
-    names8 = [e.get("name") for e in day8.get("exercises") or []]
-    names9 = [e.get("name") for e in day9.get("exercises") or []]
-    hammers = next((e for e in (day8.get("exercises") or []) if e.get("name") == "Inside Hammer Curls"), None)
-    hammer_scheme = (hammers or {}).get("scheme") or ""
-    squat = next((e for e in (day4.get("exercises") or []) if e.get("name") == "Squat Power Waves"), None)
-    speed_tb = next((e for e in (day4.get("exercises") or []) if e.get("name") == "Speed Trap Bar"), None)
-    squat_scheme = (squat or {}).get("scheme") or ""
-    speed_scheme = (speed_tb or {}).get("scheme") or ""
+    names = {n: [e.get("name") for e in (by_day[n].get("exercises") or [])] for n in by_day}
+    hammers = next((e for e in (by_day[7].get("exercises") or []) if e.get("name") == "Inside Hammer Curls"), None)
+    squat = next((e for e in (by_day[3].get("exercises") or []) if e.get("name") == "Squat Power Waves"), None)
+    speed_tb = next((e for e in (by_day[3].get("exercises") or []) if e.get("name") == "Speed Trap Bar"), None)
     return (
-        "Weighted Chin-Ups" in names2
-        and "Kneeling Plate Woodchop" in names3
-        and "Dead Bugs" in names3
-        and squat_scheme.startswith("3")
-        and "warm-up" in speed_scheme
-        and "Chest Press" in names5
-        and "Pec Deck" in names5
-        and "Dips" not in names5
-        and "Speed Cleans" not in names7
-        and "Leg Extensions" in names7
-        and "DB Shoulder Press" in names8
-        and "Pec Deck" in names8
-        and "Tricep Pushdown (cable)" in names8
-        and "Seated Tricep Pushdown (machine)" in names8
-        and "Archer Pulls" not in names8
-        and "Plate Around-the-World" in names9
-        and "Glute Bridge March" in names9
-        and hammer_scheme.startswith("3")
+        "Tempo Run" not in names[6]
+        and "Weighted Chin-Ups" in names[2]
+        and "Overhead Press" in names[2]
+        and "Recovery Bike" in names[2]
+        and ((squat or {}).get("scheme") or "").startswith("3")
+        and "warm-up" in ((speed_tb or {}).get("scheme") or "")
+        and "Kneeling Plate Woodchop" in names[4]
+        and "Dead Bugs" in names[4]
+        and "Chest Press" in names[5]
+        and "Pec Deck" in names[5]
+        and "Dips" not in names[5]
+        and "Trap-Bar Deadlift Power Waves" in names[6]
+        and "Speed Cleans" not in names[6]
+        and "Leg Extensions" in names[6]
+        and "Curls" in names[7]
+        and "Plate Around-the-World" in names[7]
+        and "Pec Deck" in names[7]
+        and "Tricep Pushdown (cable)" in names[7]
+        and "Seated Tricep Pushdown (machine)" in names[7]
+        and "Archer Pulls" not in names[7]
+        and ((hammers or {}).get("scheme") or "").startswith("3")
     )
 
 
@@ -958,7 +940,11 @@ class Store:
         ):
             data.setdefault(key, val)
         migrated = False
-        if not program_is_current(data.get("program")):
+        old_program = data.get("program")
+        if not program_is_current(old_program):
+            old_next = int(data.get("next_day") or 1)
+            if isinstance(old_program, list) and len(old_program) == 9:
+                data["next_day"] = OLD_9_TO_7_DAY.get(old_next, 1)
             data["program"] = clone_program()
             migrated = True
         if int(data.get("version") or 0) < DATA_VERSION:
@@ -975,8 +961,8 @@ class Store:
         for name, val in SEED_GOALS.items():
             goals.setdefault(name, val)
         data.setdefault("one_rms", {})
-        data["wave"] = max(1, min(4, int(data.get("wave") or 1)))
-        data["next_day"] = max(1, min(9, int(data.get("next_day") or 1)))
+        data["wave"] = max(1, min(WAVE_COUNT, int(data.get("wave") or 1)))
+        data["next_day"] = max(1, min(CYCLE_LENGTH, int(data.get("next_day") or 1)))
         if migrated:
             self._write(data)
         return data
@@ -992,15 +978,17 @@ class Store:
     def clock(self) -> dict[str, Any]:
         wave = int(self.data.get("wave", 1))
         day = int(self.data.get("next_day", 1))
-        program_day = (wave - 1) * 9 + day
+        program_day = (wave - 1) * CYCLE_LENGTH + day
+        weekday = weekday_name(day)
         return {
             "wave": wave,
             "day": day,
+            "weekday": weekday,
             "program_day": program_day,
             "block": int(self.data.get("block", 1)),
             "is_1rm_wave": wave == 4,
-            "headline": f"Wave {wave} - Day {day} - Program Day: {program_day}",
-            "days_left": 36 - program_day + 1,
+            "headline": f"Wave {wave} · {weekday} · Program Day {program_day}",
+            "days_left": MESOCYCLE_DAYS - program_day + 1,
         }
 
     def program_day(self, day: int) -> dict[str, Any]:
@@ -1330,7 +1318,7 @@ class Store:
     def log_session(self, lifts: list[dict[str, Any]], notes: str) -> dict[str, Any]:
         clock = self.clock()
         day_meta = self.next_program_day()
-        mesocycle_completed = clock["wave"] == 4 and clock["day"] == 9
+        mesocycle_completed = clock["wave"] == WAVE_COUNT and clock["day"] == CYCLE_LENGTH
         self.data["sessions"].append(
             {
                 "id": str(uuid.uuid4()),
@@ -1339,16 +1327,17 @@ class Store:
                 "wave": clock["wave"],
                 "program_day": clock["program_day"],
                 "day_name": day_meta.get("name", f"Day {clock['day']}"),
+                "weekday": day_meta.get("weekday") or weekday_name(clock["day"]),
                 "mesocycle_completed": mesocycle_completed,
                 "lifts": lifts,
                 "notes": notes.strip(),
             }
         )
-        if clock["day"] < 9:
+        if clock["day"] < CYCLE_LENGTH:
             self.data["next_day"] = clock["day"] + 1
         else:
             self.data["next_day"] = 1
-            if clock["wave"] < 4:
+            if clock["wave"] < WAVE_COUNT:
                 self.data["wave"] = clock["wave"] + 1
             else:
                 self.data["wave"] = 1
@@ -1361,7 +1350,7 @@ class Store:
             return False
         last = self.data["sessions"].pop()
         self.data["next_day"] = int(last.get("cycle_day", 1))
-        self.data["wave"] = max(1, min(4, int(last.get("wave", 1))))
+        self.data["wave"] = max(1, min(WAVE_COUNT, int(last.get("wave", 1))))
         if last.get("mesocycle_completed"):
             self.data["block"] = max(1, int(self.data.get("block", 1)) - 1)
         self.save()
@@ -1598,7 +1587,11 @@ class Achilles:
         pct = int(WAVE_LOAD_PCT.get(wave, 0.8) * 100)
         lines: list[ft.Control] = [
             muted("TODAY"),
-            txt(f"Day {nxt['day']} of 9  —  {nxt['name']}", size=22, weight=ft.FontWeight.BOLD),
+            txt(
+                f"{nxt.get('weekday') or weekday_name(nxt['day'])}  —  {nxt['name']}",
+                size=22,
+                weight=ft.FontWeight.BOLD,
+            ),
             muted(
                 f"Wave {wave} power-wave loads are {pct}% of 1RM"
                 if wave < 4
@@ -1634,7 +1627,7 @@ class Achilles:
                     )
                 )
 
-        wave_chips = ft.Row(spacing=8, controls=[self._wave_chip(i, clock["wave"]) for i in range(1, 5)])
+        wave_chips = ft.Row(spacing=8, controls=[self._wave_chip(i, clock["wave"]) for i in range(1, WAVE_COUNT + 1)])
         day_chips = ft.Row(
             spacing=6,
             wrap=True,
@@ -1669,8 +1662,9 @@ class Achilles:
 
     def _day_chip(self, day: dict[str, Any], current: int) -> ft.Container:
         active = day["day"] == current
+        weekday = (day.get("weekday") or weekday_name(day["day"]))[:3]
         return ft.Container(
-            width=84,
+            width=92,
             padding=10,
             border_radius=12,
             bgcolor=GOLD if active else SURFACE2,
@@ -1678,7 +1672,7 @@ class Achilles:
                 horizontal_alignment=ft.CrossAxisAlignment.CENTER,
                 spacing=2,
                 controls=[
-                    txt(str(day["day"]), size=14, color=BG if active else TEXT, weight=ft.FontWeight.BOLD),
+                    txt(weekday, size=14, color=BG if active else TEXT, weight=ft.FontWeight.BOLD),
                     txt("NEXT" if active else day.get("short", "")[:9], size=10, color=BG if active else MUTED),
                 ],
             ),
@@ -1727,7 +1721,9 @@ class Achilles:
         self._log_rows = []
         blocks: list[ft.Control] = [
             txt("Log workout", size=22, weight=ft.FontWeight.BOLD),
-            muted(f"{clock['headline']}  ·  {nxt['name']}"),
+            muted(
+                f"{clock['headline']}  ·  {nxt.get('weekday') or weekday_name(nxt['day'])}  ·  {nxt['name']}"
+            ),
             muted("Fill in what you did. Focus lines matter most; accessories can be left blank."),
         ]
         for block, exercises in grouped_exercises(nxt):
@@ -1766,7 +1762,11 @@ class Achilles:
                 label="Mode",
                 width=160,
                 value=(last.get("mode") if last and last.get("mode") else "Bike"),
-                options=[ft.DropdownOption(key="Bike", text="Bike"), ft.DropdownOption(key="Light run", text="Light run")],
+                options=[
+                    ft.DropdownOption(key="Bike", text="Bike"),
+                    ft.DropdownOption(key="Run", text="Run"),
+                    ft.DropdownOption(key="Light run", text="Light run"),
+                ],
             )
             add("Minutes", "minutes", fmt_num(float(last["minutes"])) if last and last.get("minutes") else "")
             add("Distance (mi)", "distance", fmt_num(float(last["distance"])) if last and last.get("distance") else "")
@@ -2118,7 +2118,7 @@ class Achilles:
             if result.get("mesocycle_completed"):
                 self.confirm(
                     "4-wave cycle complete",
-                    "That's about 5 weeks. Log body weight, body fat, muscle mass, and measurements?",
+                    "That's 4 weeks. Log body weight, body fat, muscle mass, and measurements?",
                     lambda: self.go(NAV["measurements"]),
                     "Log measurements",
                 )
@@ -2134,7 +2134,7 @@ class Achilles:
         nxt = self.store.next_program_day()
         self.confirm(
             "Skip day",
-            f"Skip Day {nxt['day']} ({nxt['name']}) and advance the cycle?",
+            f"Skip {nxt.get('weekday') or weekday_name(nxt['day'])} ({nxt['name']}) and advance the cycle?",
             lambda: (self.store.log_session([], "Skipped"), self.go(NAV["dashboard"])),
             "Skip",
         )
@@ -2340,7 +2340,7 @@ class Achilles:
             value=str(clock["wave"]),
             options=[
                 ft.DropdownOption(key=str(i), text=f"Wave {i}" + (" (1RM test)" if i == 4 else ""))
-                for i in range(1, 5)
+                for i in range(1, WAVE_COUNT + 1)
             ],
         )
         self._day_dd = ft.Dropdown(
@@ -2348,7 +2348,10 @@ class Achilles:
             width=220,
             value=str(clock["day"]),
             options=[
-                ft.DropdownOption(key=str(d["day"]), text=f"Day {d['day']} — {d['name']}")
+                ft.DropdownOption(
+                    key=str(d["day"]),
+                    text=f"{d.get('weekday') or weekday_name(d['day'])} — {d['name']}",
+                )
                 for d in self.store.data["program"]
             ],
         )
@@ -2356,7 +2359,8 @@ class Achilles:
         for day in self.store.data["program"]:
             lines: list[ft.Control] = [
                 txt(
-                    f"Day {day['day']}  —  {day['name']}" + ("  ·  NEXT" if day["day"] == clock["day"] else ""),
+                    f"{day.get('weekday') or weekday_name(day['day'])}  —  {day['name']}"
+                    + ("  ·  NEXT" if day["day"] == clock["day"] else ""),
                     size=16,
                     weight=ft.FontWeight.W_600,
                     color=GOLD if day["day"] == clock["day"] else TEXT,
@@ -2377,8 +2381,8 @@ class Achilles:
                     )
             cards.append(panel(ft.Column(lines, spacing=4)))
         return [
-            txt("9-day program", size=22, weight=ft.FontWeight.BOLD),
-            muted("Four waves of this 9-day cycle. Wave 4 is a 1-rep max test. ★ marks the lifts and tests you care about."),
+            txt("Weekly program", size=22, weight=ft.FontWeight.BOLD),
+            muted("Same day each week. Four waves of this 7-day cycle. Wave 4 is a 1-rep max test. ★ marks the lifts and tests you care about."),
             ft.Row(
                 controls=[
                     self._wave_dd,
@@ -2397,8 +2401,8 @@ class Achilles:
         except (TypeError, ValueError):
             self.snack("Pick a wave and day.")
             return
-        self.store.data["wave"] = max(1, min(4, wave))
-        self.store.data["next_day"] = max(1, min(9, day))
+        self.store.data["wave"] = max(1, min(WAVE_COUNT, wave))
+        self.store.data["next_day"] = max(1, min(CYCLE_LENGTH, day))
         self.store.save()
         self.snack(self.store.clock()["headline"])
         self.go(NAV["dashboard"])
@@ -2419,7 +2423,7 @@ class Achilles:
 
         self.confirm(
             "Restore program",
-            "Reload the built-in 9-day layout? Sessions, waves, goals, and measurements are kept.",
+            "Reload the built-in 7-day weekly layout? Sessions, waves, goals, and measurements are kept.",
             restore,
             "Restore",
         )
@@ -2447,8 +2451,9 @@ class Achilles:
             pd = session.get("program_day")
             stamp = f"Wave {wave}  ·  Program Day {pd}  ·  {dt}" if wave else dt
             lifts = session.get("lifts") or []
+            day_label = session.get("weekday") or f"Day {session.get('cycle_day')}"
             lines: list[ft.Control] = [
-                txt(f"Day {session.get('cycle_day')}  —  {session.get('day_name', '')}", size=15, weight=ft.FontWeight.W_600),
+                txt(f"{day_label}  —  {session.get('day_name', '')}", size=15, weight=ft.FontWeight.W_600),
                 muted(stamp),
             ]
             if not lifts:
@@ -2538,7 +2543,7 @@ class Achilles:
         return [
             txt("Body measurements", size=22, weight=ft.FontWeight.BOLD),
             muted(
-                "Update after a 4-wave cycle (~5 weeks). "
+                "Update after a 4-wave cycle (~4 weeks). "
                 f"Current clock: {clock['headline']}. {clock['days_left']} days until the next planned check-in."
             ),
             panel(ft.Column([ft.Row(wrap=True, spacing=12, run_spacing=12, controls=fields_row), self._measure_notes], spacing=16)),
